@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "новости" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      @@include('html/breadcrumbs.html', { "title": "новости" })
+      <section class="news section-pad">
+        <div class="container">
+          <div class="news__container">
+            <div class="news__heading heading">
+              <h1 class="news__title title text-down">новости</h1>
+            </div>
+            <div class="news__cards">
+              <div class="news__card">
+                <h3 class="news__caption title"><a href="">Новые форматы, максимальная видимость: наружная реклама с нами</a></h3>
+                <div class="news__box">
+                  <div class="news__txt">Размещение на готовых конструкциях позволяет вам существенно сократить время</div>
+                  <div class="news__date">12.01.2024</div>
+                  <a href="#" class="news__more button">
+                    <span>Читать далее</span>
+                    <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 5.5H17.5M17.5 5.5L13 1M17.5 5.5L13 10" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>                      
+                  </a>
+                </div>
+                <a class="news__img" href=""><img src="@img/image-1.png" alt="News 1"></a>
+              </div>
+              <div class="news__card">
+                <h3 class="news__caption title"><a href="">Новые форматы, максимальная видимость: наружная реклама с нами</a></h3>
+                <div class="news__box">
+                  <div class="news__txt">Размещение на готовых конструкциях позволяет вам существенно сократить время</div>
+                  <div class="news__date">12.01.2024</div>
+                  <a href="#" class="news__more button">
+                    <span>Читать далее</span>
+                    <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 5.5H17.5M17.5 5.5L13 1M17.5 5.5L13 10" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>                      
+                  </a>
+                </div>
+                <a class="news__img" href=""><img src="@img/image-2.png" alt="News 2"></a>
+              </div>
+              <div class="news__card">
+                <h3 class="news__caption title"><a href="">Новые форматы, максимальная видимость: наружная реклама с нами</a></h3>
+                <div class="news__box">
+                  <div class="news__txt">Размещение на готовых конструкциях позволяет вам существенно сократить время</div>
+                  <div class="news__date">12.01.2024</div>
+                  <a href="#" class="news__more button">
+                    <span>Читать далее</span>
+                    <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 5.5H17.5M17.5 5.5L13 1M17.5 5.5L13 10" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>                      
+                  </a>
+                </div>
+                <a class="news__img" href=""><img src="@img/image-3.png" alt="News 3"></a>
+              </div>
+            </div>
+            <ul class="news__pagination pagination">
+              <li><a href="" class="prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29304 12.7071C7.90252 12.3166 7.90252 11.6834 8.29304 11.2929L13.9499 5.63604C14.3404 5.24551 14.9736 5.24551 15.3641 5.63604C15.7546 6.02656 15.7546 6.65973 15.3641 7.05025L10.4144 12L15.3641 16.9497C15.7546 17.3403 15.7546 17.9734 15.3641 18.364C14.9736 18.7545 14.3404 18.7545 13.9499 18.364L8.29304 12.7071Z" fill="#EBEBF5" fill-opacity="0.6"/>
+                </svg>                  
+              </a></li>
+              <li><a href="" class="active">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><span>...</span></li>
+              <li><a href="">8</a></li>
+              <li><a href="">9</a></li>
+              <li><a href="">10</a></li>
+              <li><a href="" class="next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.707 11.2929C16.0975 11.6834 16.0975 12.3166 15.707 12.7071L10.0501 18.364C9.65958 18.7545 9.02641 18.7545 8.63589 18.364C8.24536 17.9734 8.24536 17.3403 8.63589 16.9497L13.5856 12L8.63589 7.05025C8.24536 6.65973 8.24536 6.02656 8.63589 5.63604C9.02641 5.24551 9.65958 5.24551 10.0501 5.63604L15.707 11.2929Z" fill="#EBEBF5" fill-opacity="0.6"/>
+                </svg>                  
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

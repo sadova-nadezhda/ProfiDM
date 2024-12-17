@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "клиенты" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      @@include('html/breadcrumbs.html', { "title": "клиенты" })
+      <section class="clients clients-page section-pad">
+        <div class="container">
+          <div class="clients__container clients-page__container">
+            <div class="clients__heading clients-page__heading heading">
+              <h2 class="clients__title clients-page__title title text-down">клиенты</h2>
+            </div>
+          </div>
+        </div>
+        <div class="clients__cards clients-page__cards cards">
+          @@include('html/clientsCard.html') 
+          @@include('html/clientsCard.html') 
+          @@include('html/clientsCard.html') 
+          @@include('html/clientsCard.html') 
+          @@include('html/clientsCard.html') 
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
