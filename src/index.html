@@ -1,108 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/head.html', { "title": "Главная" })
-  <body>
-    @@include('html/header.html')
+@@include('html/head.html', { "title": "Главная" })
 
-    <main>
-      <section class="hero section-top">
-        <div class="container">
-          <div class="hero__container"></div>
-        </div>
-      </section>
-      <section class="clients section-pad-top">
-        <div class="container">
-          <div class="clients__container">
-            <div class="clients__top heading">
-              <h2 class="clients__title title text-down">наши клиенты</h2>
-              <a href="" class="clients__button button button-line">подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="clients__cards cards">
-          @@include('html/clientsCard.html') 
-          @@include('html/clientsCard.html') 
-          @@include('html/clientsCard.html') 
-          @@include('html/clientsCard.html') 
-          @@include('html/clientsCard.html') 
-        </div>
-      </section>
-      <section class="services section-pad">
-        <div class="container">
-          <div class="services__container">
-            <div class="services__heading heading">
-              <h2 class="services__title title text-down">услуги</h2>
-              <a href="" class="services__button button button-line">подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="services__cards cards">
-          @@include('html/servicesCard.html') 
-          @@include('html/servicesCard.html') 
-          @@include('html/servicesCard.html') 
-          @@include('html/servicesCard.html') 
-          @@include('html/servicesCard.html') 
-        </div>
-      </section>
-      <section class="portfolio section-hidden section-pad">
-        <div class="container">
-          <div class="portfolio__container">
-            <div class="portfolio__top heading">
-              <h2 class="portfolio__title title text-down">портфолио</h2>
-              <a href="" class="portfolio__button button button-line">подробнее</a>
-            </div>
-            <div class="portfolio__cards cards">
-              @@include('html/portfolioCard.html') 
-              @@include('html/portfolioCard.html') 
-              @@include('html/portfolioCard.html') 
-              @@include('html/portfolioCard.html') 
-              @@include('html/portfolioCard.html') 
-            </div>
-            <div class="portfolio__marquee text-up">
-              <div class="items marquee">
-                <div class="item">Портфолио</div>
-                <div class="item">Портфолио</div>
-                <div class="item">Портфолио</div>
-              </div>
-              <div aria-hidden="true" class="items marquee">
-                <div class="item">Портфолио</div>
-                <div class="item">Портфолио</div>
-                <div class="item">Портфолио</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="feedback section-pad">
-        <div class="container">
-          <div class="feedback__container">
-            @@include('html/feedback.html') 
-          </div>
-        </div>
-      </section>
-      <section class="benefits section-pad">
-        <div class="container">
-          <div class="benefits__container">
-            <div class="benefits__top heading">
-              <h2 class="benefits__title title text-down">преимущества</h2>
-            </div>
-            <div class="benefits__cards cards">
-              @@include('html/benefitsCard.html') 
-              @@include('html/benefitsCard.html') 
-              @@include('html/benefitsCard.html') 
-            </div>
-          </div>
-        </div>
-      </section>
+<body>
+  @@include('html/header.html')
 
-      <!-- <section class="">
+  <main>
+    <section class="hero section-top">
+      <div class="container">
+        <div class="hero__container">
+          <div class="hero__desc">
+            Крупнейшая сеть рекламных конструкций <br> в ключевых точках города. <br> Размещайте рекламу,
+            которую увидят тысячи
+          </div>
+          <div class="hero__map">
+            <img src="@img/map.svg" alt="map">
+          </div>
+          <div class="hero__bottom">
+            <h1 class="hero__title title title-lg text-up">Эффективная наружная реклама в Астане</h1>
+            <a href="#" class="hero__button button">
+              <span>Карта размещений</span>
+              <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 5.5H17.5M17.5 5.5L13 1M17.5 5.5L13 10" stroke="#AC262F" stroke-width="1.5"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients section-pad-top">
+      <div class="container">
+        <div class="clients__container">
+          <div class="clients__top heading">
+            <h2 class="clients__title title text-down">наши клиенты</h2>
+            <a href="" class="clients__button button button-line">подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="clients__cards cards">
+        @@include('html/clientsCard.html')
+        @@include('html/clientsCard.html')
+        @@include('html/clientsCard.html')
+        @@include('html/clientsCard.html')
+        @@include('html/clientsCard.html')
+      </div>
+    </section>
+    <section class="services section-pad">
+      <div class="container">
+        <div class="services__container">
+          <div class="services__heading heading">
+            <h2 class="services__title title text-down">услуги</h2>
+            <a href="" class="services__button button button-line">подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="services__cards cards">
+        @@include('html/servicesCard.html')
+        @@include('html/servicesCard.html')
+        @@include('html/servicesCard.html')
+        @@include('html/servicesCard.html')
+        @@include('html/servicesCard.html')
+      </div>
+    </section>
+    <section class="portfolio section-hidden section-pad">
+      <div class="container">
+        <div class="portfolio__container">
+          <div class="portfolio__top heading">
+            <h2 class="portfolio__title title text-down">портфолио</h2>
+            <a href="" class="portfolio__button button button-line">подробнее</a>
+          </div>
+          <div class="portfolio__cards cards">
+            @@include('html/portfolioCard.html')
+            @@include('html/portfolioCard.html')
+            @@include('html/portfolioCard.html')
+            @@include('html/portfolioCard.html')
+            @@include('html/portfolioCard.html')
+          </div>
+          <div class="portfolio__marquee text-up">
+            <div class="items marquee">
+              <div class="item">Портфолио</div>
+              <div class="item">Портфолио</div>
+              <div class="item">Портфолио</div>
+            </div>
+            <div aria-hidden="true" class="items marquee">
+              <div class="item">Портфолио</div>
+              <div class="item">Портфолио</div>
+              <div class="item">Портфолио</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback section-pad">
+      <div class="container">
+        <div class="feedback__container">
+          @@include('html/feedback.html')
+        </div>
+      </div>
+    </section>
+    <section class="benefits section-pad">
+      <div class="container">
+        <div class="benefits__container">
+          <div class="benefits__top heading">
+            <h2 class="benefits__title title text-down">преимущества</h2>
+          </div>
+          <div class="benefits__cards cards">
+            @@include('html/benefitsCard.html')
+            @@include('html/benefitsCard.html')
+            @@include('html/benefitsCard.html')
+            @@include('html/benefitsCard.html')
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="">
         <div class="container">
           <div class="__container"></div>
         </div>
       </section> -->
-    </main>
+  </main>
 
-    @@include('html/footer.html') 
-    @@include('html/foot.html')
-  </body>
+  @@include('html/footer.html')
+  @@include('html/foot.html')
+</body>
+
 </html>
