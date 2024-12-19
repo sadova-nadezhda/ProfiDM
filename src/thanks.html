@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Спасибо за заявку" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      @@include('html/breadcrumbs.html', { "title": "спасибо за заявку" })
+      <section class="thanks section-pad">
+        <div class="container">
+          <div class="thanks__container">
+            <div class="feedback__wrap thanks__wrap">
+              <div class="feedback__flashlight thanks__flashlight">
+                <span class="glow"></span>
+                <span class="glow"></span>
+                <span class="glow"></span>
+              </div>
+              <div class="feedback__box thanks__box">
+                <h3 class="feedback__caption thanks__caption text-up">спасибо за заявку!</h3>
+                <a href="" class="thanks__btn button text-up">
+                  <span>на главную</span>
+                  <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5.5H17.5M17.5 5.5L13 1M17.5 5.5L13 10" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>                    
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "404" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="page-error section-top">
+        <div class="container">
+          <div class="page-error__container">
+            <div class="page-error__txt">к сожалению, <br>
+              страниа не найдена :(</div>
+            <a href="" class="page-error__link button text-up">
+              <span>на главную</span>
+              <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 5.5H17.5M17.5 5.5L13 1M17.5 5.5L13 10" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>                
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

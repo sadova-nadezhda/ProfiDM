@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Портфолио" })
+  <body>
+    @@include('html/header.html')
+
+    <!-- страница внут портфолио добавить класс "main-portfolio-inner" к main  -->
+    <!-- класс для стилизации хлеб крошек и карточек другие портфолио -->
+    <main class="main-portfolio-inner">
+      @@include('html/breadcrumbs.html', { "title": "Портфолио" })
+      <section class="portfolio-inner section-top">
+        <img class="back" src="@img/portfolio.png" alt="Portfolio image">
+        <div class="container">
+          <div class="portfolio-inner__container">
+            <h1 class="portfolio-inner__title title text-down">Мюпи</h1>
+            <div class="portfolio-inner__box">
+              <div class="portfolio-inner__date">
+                <span>Дата:</span>
+                <span>12.01.2024</span>
+              </div>
+              <div class="portfolio-inner__location">
+                <span>Локация:</span>
+                <span>ул. Аманжолова, остановка Дворец Независимости,жк Милениум Парк</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio-video">
+        <div class="container">
+          <div class="portfolio-video__container">
+            <div class="portfolio-video__box" data-id="_sJGAsjvSK0?si=Weav1l7c2u3nIoDz">
+              <img src="@img/poster.png" alt="video preview">
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/_sJGAsjvSK0?si=Weav1l7c2u3nIoDz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio-gallery section-pad-top">
+        <div class="container">
+          <div class="portfolio-gallery__container">
+            <div class="portfolio-gallery__heading heading">
+              <h2 class="portfolio-gallery__title title text-down">Фото</h2>
+              <div class="portfolio-gallery__arrows">
+                <div class="portfolio-gallery__arrow portfolio-gallery__prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.26541 11.3627C3.91153 11.7147 3.91153 12.2853 4.26541 12.6373L9.39145 17.736C9.74533 18.088 10.3191 18.088 10.673 17.736C11.0268 17.384 11.0268 16.8133 10.673 16.4613L7.09384 12.9013H19.0938C19.5943 12.9013 20 12.4978 20 12C20 11.5022 19.5943 11.0987 19.0938 11.0987H7.09384L10.673 7.53866C11.0268 7.18667 11.0268 6.61598 10.673 6.26399C10.3191 5.912 9.74533 5.912 9.39145 6.26399L4.26541 11.3627Z" fill="white"/>
+                  </svg>                    
+                </div>
+                <div class="portfolio-gallery__arrow portfolio-gallery__next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.6085 6.26399L19.7346 11.3627C20.0885 11.7147 20.0885 12.2853 19.7346 12.6373L14.6085 17.736C14.2547 18.088 13.6809 18.088 13.327 17.736C12.9732 17.384 12.9732 16.8133 13.327 16.4613L16.9062 12.9013H4.90616C4.4057 12.9013 4 12.4978 4 12C4 11.5022 4.4057 11.0987 4.90616 11.0987H16.9062L13.327 7.53866C12.9732 7.18667 12.9732 6.61598 13.327 6.26399C13.6809 5.912 14.2547 5.912 14.6085 6.26399Z" fill="white"/>
+                  </svg>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper portfolioSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide portfolio-gallery__slide"><img src="@img/image-4.png" alt=""></div>
+            <div class="swiper-slide portfolio-gallery__slide"><img src="@img/image-5.png" alt=""></div>
+            <div class="swiper-slide portfolio-gallery__slide"><img src="@img/image-6.png" alt=""></div>
+            <div class="swiper-slide portfolio-gallery__slide"><img src="@img/image-5.png" alt=""></div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio-other section-pad">
+        <div class="container">
+          <div class="portfolio-other__container">
+            <div class="portfolio-other__heading heading">
+              <h2 class="portfolio-other__title title text-down">Другие проекты</h2>
+            </div>
+            <div class="portfolio-other__cards portfolio-page__cards">
+              <div class="portfolio-page__card">
+                <div class="portfolio-page__caption">Диджитал борды</div>
+                <div class="portfolio-page__address">пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</div>
+                <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+              </div>
+              <div class="portfolio-page__card">
+                <div class="portfolio-page__caption">Экраны</div>
+                <div class="portfolio-page__address">пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</div>
+                <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+              </div>
+              <div class="portfolio-page__card">
+                <div class="portfolio-page__caption">Мюпи</div>
+                <div class="portfolio-page__address">Шоссе Коргалжын/ ул. Аягоз, остановка Сарыарка</div>
+                <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+              </div>
+              <div class="portfolio-page__card">
+                <div class="portfolio-page__caption">Ситиборды</div>
+                <div class="portfolio-page__address">пр. Туран, «Центральный парк»</div>
+                <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
