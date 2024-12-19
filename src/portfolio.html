@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Портфолио" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      @@include('html/breadcrumbs.html', { "title": "Портфолио" })
+      <section class="portfolio-page section-pad">
+        <div class="container">
+          <div class="portfolio-page__container">
+            <div class="portfolio__heading portfolio-page__heading heading">
+              <h1 class="portfolio__title portfolio-page__title title text-down">портфолио</h1>
+            </div>
+          </div>
+          <div class="portfolio-page__tabs tabs">
+            <div class="tabs__nav">
+              <select class="mobile-select">
+                <option data-target="#portfolio-target-1">Диджитал борды</option>
+                <option data-target="#portfolio-target-2">Экраны</option>
+                <option data-target="#portfolio-target-3">Мюпи</option>
+                <option data-target="#portfolio-target-4">Ситиборды</option>
+                <option data-target="#portfolio-target-5">Лед экраны</option>
+              </select>
+              <div class="trigger" data-target="#portfolio-target-1"><span>Диджитал борды</span></div>
+              <div class="trigger" data-target="#portfolio-target-2"><span>Экраны</span></div>
+              <div class="trigger" data-target="#portfolio-target-3"><span>Мюпи</span></div>
+              <div class="trigger" data-target="#portfolio-target-4"><span>Ситиборды</span></div>
+              <div class="trigger" data-target="#portfolio-target-5"><span>Лед экраны</span></div>
+            </div>
+            <div class="tabs__contents">
+              <div class="targets">
+                <div class="target portfolio-page__cards" id="portfolio-target-1">
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Диджитал борды</div>
+                    <div class="portfolio-page__address">пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Диджитал борды</div>
+                    <div class="portfolio-page__address">Шоссе Коргалжын/ ул. Аягоз, остановка Сарыарка</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Диджитал борды</div>
+                    <div class="portfolio-page__address">пр. Туран, «Центральный парк»</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                </div>
+                <div class="target portfolio-page__cards" id="portfolio-target-2">
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Экраны</div>
+                    <div class="portfolio-page__address">пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Экраны</div>
+                    <div class="portfolio-page__address">Шоссе Коргалжын/ ул. Аягоз, остановка Сарыарка</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Экраны</div>
+                    <div class="portfolio-page__address">пр. Туран, «Центральный парк»</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                </div>
+                <div class="target portfolio-page__cards" id="portfolio-target-3">
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Мюпи</div>
+                    <div class="portfolio-page__address">пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Мюпи</div>
+                    <div class="portfolio-page__address">Шоссе Коргалжын/ ул. Аягоз, остановка Сарыарка</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Мюпи</div>
+                    <div class="portfolio-page__address">пр. Туран, «Центральный парк»</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                </div>
+                <div class="target portfolio-page__cards" id="portfolio-target-4">
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Ситиборды</div>
+                    <div class="portfolio-page__address">пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Ситиборды</div>
+                    <div class="portfolio-page__address">Шоссе Коргалжын/ ул. Аягоз, остановка Сарыарка</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Ситиборды</div>
+                    <div class="portfolio-page__address">пр. Туран, «Центральный парк»</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                </div>
+                <div class="target portfolio-page__cards" id="portfolio-target-5">
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Лед экраны</div>
+                    <div class="portfolio-page__address">пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Лед экраны</div>
+                    <div class="portfolio-page__address">Шоссе Коргалжын/ ул. Аягоз, остановка Сарыарка</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                  <div class="portfolio-page__card">
+                    <div class="portfolio-page__caption">Лед экраны</div>
+                    <div class="portfolio-page__address">пр. Туран, «Центральный парк»</div>
+                    <a href="" class="portfolio-page__link button button-line">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
