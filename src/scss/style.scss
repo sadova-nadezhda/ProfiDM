@@ -379,6 +379,107 @@
   }
 }
 
+// accordion
+
+.accordion {
+  &-container {
+    padding-top: 20px;
+    border-top: 1px solid var(--white, #ffffff);
+  }
+  &-item {
+    border-bottom: 1px solid var(--white, #ffffff);
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    padding-bottom: 20px;
+    border: none;
+    outline: 0;
+    color: inherit;
+    background: transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    .icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: transform 0.3s ease;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &.active {
+      .icon {
+        transform: rotate(-180deg);
+      }
+    }
+    @media(max-width: 767px) {
+      gap: 16px;
+    }
+  }
+  &-caption {
+    width: calc(33% - 24px);
+    @media(max-width: 767px) {
+      width: calc(100% - 24px);
+    }
+  }
+  &-txt {
+    max-width: 660px;
+    color: rgba(235, 235, 245, 0.60);
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: calc(100% - 33%);
+    max-height: 0;
+    margin-left: auto;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    @media(max-width: 767px) {
+      gap: 24px;
+      width: calc(100%);
+    }
+  }
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 30px;
+    @media(max-width: 767px) {
+      gap: 16px;
+      margin-top: 0;
+    }
+  }
+  &-btn {
+    margin-bottom: 50px;
+    svg {
+      transition: transform 0.3s ease-out;
+    }
+    &:hover {
+      svg {
+        transform: translateX(12px);
+        @media(max-width: 980px) {
+          transform: translateX(8px);
+        }
+      }
+    }
+    @media(max-width: 767px) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
 // Карточки
 
 .cards {
@@ -1277,6 +1378,85 @@
     opacity: 0;
     transition: opacity .5s ease-out;
   }
+}
+
+// vacancies
+
+.vacancies {
+  &-feedback {
+    &__box {
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    &__title {
+      margin-bottom: 50px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      @media(max-width: 980px) {
+        min-height: unset;
+      }
+      button {
+        margin-top: 18px;
+      }
+      input {
+        border-bottom: 1px solid #38383A;
+      }
+    }
+  }
+}
+
+.file__conainer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+input.file {
+  opacity: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  border: 0;
+}
+input.file:hover {
+  cursor: pointer;
+}
+.file__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #38383A;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 0;
+}
+.file-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  color: rgba(235, 235, 245, 0.60);
+  cursor: pointer;
+}
+.file-button svg {
+  width: 100%;
+  height: 100%;
+}
+.file-txt {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 24px);   
+  color: rgba(235, 235, 245, 0.60);     
+}
+.file-done {
+  display: none;
 }
 
 // map

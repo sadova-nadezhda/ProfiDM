@@ -93,6 +93,29 @@ window.addEventListener("load", function () {
     }
   });
 
+  // Аккордеон
+  document.querySelectorAll(".accordion-header").forEach((button) => {
+    button.addEventListener("click", () => {
+      const accordionContent = button.nextElementSibling;
+
+      button.classList.toggle("active");
+
+      if (button.classList.contains("active")) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      } else {
+        accordionContent.style.maxHeight = 0;
+      }
+
+      document.querySelectorAll(".accordion-header").forEach((otherButton) => {
+        if (otherButton !== button) {
+          otherButton.classList.remove("active");
+          otherButton.nextElementSibling.style.maxHeight = 0;
+        }
+      });
+    });
+  });
+
+
   // Превью видео
   const video = document.querySelector(".portfolio-video__box");
   if(video) {
@@ -125,8 +148,7 @@ window.addEventListener("load", function () {
     }
   });
 
-  // Popup
-
+  // Popup hide/show
   function hidePopup(popup) {
     popup.addEventListener('click', function(e) {
       const target = e.target;
@@ -142,7 +164,6 @@ window.addEventListener("load", function () {
       }
     });
   }
-
   function showPopup(popup) {
     popup.style.display = "flex";
     setTimeout(() => {
@@ -151,7 +172,7 @@ window.addEventListener("load", function () {
     }, 10);
   } 
 
-  //popup
+  // popup
   let popup = document.querySelector('.popup')
   let popupBtns = document.querySelectorAll(".popup-btn");
   if(popup && popupBtns){
@@ -161,6 +182,23 @@ window.addEventListener("load", function () {
         showPopup(popup);
       })
     })
+  }
+
+  // file
+
+  let file = document.querySelector('.file');
+  if(file){
+    file.addEventListener('change', ()=> {
+      if(file.files[0]?.name) {
+        document.querySelector('.file-done').style.display = 'block';
+        document.querySelector('.file-done').innerHTML = file.files[0].name;
+        document.querySelector('.file-empty').style.display = 'none';
+      }
+      else {
+        document.querySelector('.file-done').style.display = 'none';
+        document.querySelector('.file-empty').style.display = 'block';
+      }
+    });
   }
 
   window.addEventListener("resize", () => {
