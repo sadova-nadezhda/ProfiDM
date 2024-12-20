@@ -1794,6 +1794,12 @@ input.file {
 // map
 
 .map {
+  &__heading {
+    @media(max-width: 767px) {
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+  }
   &__select {
     position: relative;
     border-bottom: 1px solid #fff;
@@ -1819,6 +1825,9 @@ input.file {
       width: 24px;
       height: 24px;
       background: url(../img/filter.svg) center / contain no-repeat;
+    }
+    @media(max-width: 767px) {
+      width: 100%;
     }
   }
   .popup-content {
