@@ -10,8 +10,12 @@ function addPadTop(section) {
 function handleScroll() {
   if (window.innerWidth > 980) {
     const currentScroll = window.scrollY;
-    header.classList.toggle('hidden', currentScroll > lastScrollTop);
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    if (currentScroll <= 0) {
+      header.classList.remove('hidden');
+    } else {
+      header.classList.add('hidden');
+    }
+    lastScrollTop = currentScroll;
   } else {
     header.classList.remove('hidden');
   }
@@ -125,16 +129,6 @@ window.addEventListener("load", function () {
       this.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${YTid}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }, { passive: true });
   }
-
-  // Текст дугой
-
-  // const texts = document.querySelectorAll('.services-steps text');
-  // texts.forEach(text => {
-  //   const svg = text.closest('svg');
-  //   const scaleFactor = svg.getBoundingClientRect().width / 300; 
-  //   text.style.fontSize = `${16 / scaleFactor}px`; 
-  // });
-
 
   // Swiper
 
