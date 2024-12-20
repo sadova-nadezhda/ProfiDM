@@ -182,6 +182,69 @@ window.addEventListener("load", function () {
     },
   });
 
+  var portfolioCards = new Swiper(".portfolioCards", {
+    direction: "vertical",
+    slidesPerView: 2,
+    spaceBetween: 80,
+    mousewheel: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.05,
+        spaceBetween: 50,
+      },
+    }
+  });
+
+  var clientsCards = new Swiper(".clientsCards", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    mousewheel: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
+    }
+  });
+
+  let servicesCards;
+
+  function initSwiper() {
+    if (window.innerWidth > 768) {
+      if (!servicesCards) {
+        servicesCards = new Swiper(".servicesCards", {
+          slidesPerView: 3,
+          spaceBetween: 0,
+          mousewheel: true,
+        });
+      }
+    } else {
+      if (servicesCards) {
+        servicesCards.destroy(true, true); // Уничтожаем слайдер
+        servicesCards = null;
+      }
+    }
+  }
+
+  initSwiper();
+
+
+  var benefitsCards = new Swiper(".benefitsCards", {
+    slidesPerView: 1,
+    spaceBetween: 8,
+    mousewheel: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      981: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
+    }
+  });
+
   // Popup hide/show
 
   function hidePopup(popup) {
@@ -237,6 +300,7 @@ window.addEventListener("load", function () {
   }
 
   window.addEventListener("resize", () => {
+    initSwiper();
     sectionTop.forEach(addPadTop);
     if (window.innerWidth <= 980) {
       header.classList.remove('hidden');
