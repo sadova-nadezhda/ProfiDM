@@ -476,6 +476,9 @@
 
               // Сохраняем ссылку на открытое окно, чтобы можно было его закрыть в следующий раз
               currentInfoWindow = infowindow;
+
+              const infoWindowElement = document.querySelector("#infoWindowContent").parentNode.parentNode;
+              infoWindowElement.classList.add("custom-popup");
             });
 
             markersArray.push(marker);
