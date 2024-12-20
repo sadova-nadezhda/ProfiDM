@@ -499,7 +499,7 @@
       width: 280px;
     }
     @media(max-width: 767px) {
-      width: 180px;
+      width: 100%;
     }
   }
 }
@@ -675,16 +675,19 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       row-gap: 24px;
+      height: auto;
       @media (max-width: 980px) {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 16px;
       }
       @media (max-width: 767px) {
         gap: 8px;
+        height: auto;
+        width: auto;
         margin: 0 16px;
       }
     }
-    &__card {
+    .clients__card {
       max-height: 277px;
       height: 19vw;
       min-height: 131px;
@@ -706,6 +709,7 @@
     height: 498px;
     @media(max-width: 767px) {
       height: auto;
+      width: auto;
       margin: 0 16px;
     }
 
@@ -845,8 +849,12 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       row-gap: 24px;
+      width: auto;
+      height: auto;
       @media (max-width: 980px) {
         grid-template-columns: repeat(2, 1fr);
+        width: auto;
+        height: auto;
       }
       @media (max-width: 767px) {
         grid-template-columns: 1fr;
@@ -854,10 +862,24 @@
         margin: 0 16px;
       }
     }
-    &__card {
+    .services__card {
       max-height: 498px;
       height: 34vw;
-      min-height: 200px;
+      min-height: 257px;
+    }
+    .services__top {
+      margin-bottom: 32px;
+    }
+    .services__icon {
+      height: 160px;
+      @media(max-width: 980px) {
+        height: 130px;
+      }
+    }
+    .services__caption {
+      @media(max-width: 767px) {
+        max-width: 130px;
+      }
     }
     .services__desc {
       @media(max-width: 980px) {
@@ -2010,6 +2032,9 @@ input.file {
       transition: color 0.3s ease-out;
       &:hover {
         color: var(--main, $main);
+      }
+      @media(max-width: 767px) {
+        max-width: 260px;
       }
     }
   }

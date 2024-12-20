@@ -186,11 +186,12 @@ window.addEventListener("load", function () {
     direction: "vertical",
     slidesPerView: 2,
     spaceBetween: 80,
-    mousewheel: true,
+    mousewheel: false,
     breakpoints: {
       768: {
         slidesPerView: 1.05,
         spaceBetween: 50,
+        mousewheel: true,
       },
     }
   });
@@ -198,11 +199,12 @@ window.addEventListener("load", function () {
   var clientsCards = new Swiper(".clientsCards", {
     slidesPerView: 2,
     spaceBetween: 0,
-    mousewheel: true,
+    mousewheel: false,
     breakpoints: {
       768: {
         slidesPerView: 3,
         spaceBetween: 0,
+        mousewheel: true,
       },
     }
   });
@@ -232,15 +234,17 @@ window.addEventListener("load", function () {
   var benefitsCards = new Swiper(".benefitsCards", {
     slidesPerView: 1,
     spaceBetween: 8,
-    mousewheel: true,
+    mousewheel: false,
     breakpoints: {
       768: {
         slidesPerView: 2,
         spaceBetween: 0,
+        mousewheel: true,
       },
       981: {
         slidesPerView: 3,
         spaceBetween: 0,
+        mousewheel: true,
       },
     }
   });
