@@ -12,19 +12,549 @@
             <div class="map__heading heading">
               <h2 class="map__title title text-down">Карта размещений</h2>
               <div class="map__select">
-                <select name="" id="">
+                <select id="category-select">
                   <option value="">Экраны 1</option>
                   <option value="">Экраны 2</option>
-                  <option value=""> Экраны 3</option>
+                  <option value="">Экраны 3</option>
                 </select>
               </div>
             </div>
+            <div id="map"></div>
           </div>
         </div>
       </section>
     </main>
 
+    <div id="popup" class="custom-popup"></div>
+    <!-- Кастомный попап -->
+
     @@include('html/footer.html') 
     @@include('html/foot.html')
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk5ygVl5j1SW6TveEr4HFXCA3NT1Qm0vs&callback=initMap"
+      async
+      defer
+    ></script>
+    <script>
+      var map;
+      var markersArray = [];
+      var popup = document.getElementById("popup");
+      var currentInfoWindow = null; // Для отслеживания текущего открытого попапа
+      function initMap() {
+        const darkStyle = [
+          { elementType: "geometry", stylers: [{ color: "#212121" }] },
+          { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+          { elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
+          {
+            elementType: "labels.text.stroke",
+            stylers: [{ color: "#212121" }],
+          },
+          {
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [{ color: "#ff0000" }], // Красный цвет линий дорог
+          },
+          {
+            featureType: "road",
+            elementType: "geometry.stroke",
+            stylers: [{ color: "#ff0000" }], // Красный цвет границ дорог
+          },
+          {
+            featureType: "administrative",
+            elementType: "geometry",
+            stylers: [{ color: "#757575" }],
+          },
+          {
+            featureType: "administrative.country",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#9e9e9e" }],
+          },
+          {
+            featureType: "administrative.land_parcel",
+            stylers: [{ visibility: "off" }],
+          },
+          {
+            featureType: "administrative.locality",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#bdbdbd" }],
+          },
+          {
+            featureType: "poi",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#757575" }],
+          },
+          {
+            featureType: "poi.park",
+            elementType: "geometry",
+            stylers: [{ color: "#181818" }],
+          },
+          {
+            featureType: "poi.park",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#616161" }],
+          },
+          {
+            featureType: "poi.park",
+            elementType: "labels.text.stroke",
+            stylers: [{ color: "#1b1b1b" }],
+          },
+          {
+            featureType: "road",
+            elementType: "geometry.fill",
+            stylers: [{ color: "#2c2c2c" }],
+          },
+          {
+            featureType: "road",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#8a8a8a" }],
+          },
+          {
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [{ color: "#373737" }],
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry",
+            stylers: [{ color: "#ff3333" }], // Более светлый красный для шоссе
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry.stroke",
+            stylers: [{ color: "#ff3333" }],
+          },
+          {
+            featureType: "road.highway.controlled_access",
+            elementType: "geometry",
+            stylers: [{ color: "#4e4e4e" }],
+          },
+          {
+            featureType: "road.local",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#616161" }],
+          },
+          {
+            featureType: "transit",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#757575" }],
+          },
+          {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [{ color: "#000000" }],
+          },
+          {
+            featureType: "water",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#3d3d3d" }],
+          },
+        ];
+
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: new google.maps.LatLng(51.14207, 71.44542),
+          zoom: 11,
+          mapTypeId: "terrain",
+          styles: darkStyle, // Применение стиля
+        });
+
+        var markerIcon = {
+          category1: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: "red", // Цвет для категории 1
+            fillOpacity: 1,
+            strokeWeight: 2,
+            strokeColor: "white",
+          },
+          category2: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: "blue", // Цвет для категории 2
+            fillOpacity: 1,
+            strokeWeight: 2,
+            strokeColor: "white",
+          },
+          category3: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: "green", // Цвет для категории 3
+            fillOpacity: 1,
+            strokeWeight: 2,
+            strokeColor: "white",
+          },
+        };
+
+        var markersData = [
+          {
+            position: { lat: 51.14409, lng: 71.41163 },
+            category: "category1",
+            title: "Метка 1",
+            description: "Описание метки 1",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.14603, lng: 71.40979 },
+            category: "category1",
+            title: "Метка 2",
+            description: "Описание метки 2",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.14732, lng: 71.39836 },
+            category: "category1",
+            title: "Метка 3",
+            description: "Описание метки 3",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.1467, lng: 71.3759 },
+            category: "category1",
+            title: "Метка 4",
+            description: "Описание метки 4",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.14771, lng: 71.39338 },
+            category: "category1",
+            title: "Метка 5",
+            description: "Описание метки 5",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.14661, lng: 71.40053 },
+            category: "category1",
+            title: "Метка 6",
+            description: "Описание метки 6",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.14565, lng: 71.40761 },
+            category: "category1",
+            title: "Метка 7",
+            description: "Описание метки 7",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13914, lng: 71.40913 },
+            category: "category1",
+            title: "Метка 8",
+            description: "Описание метки 8",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13767, lng: 71.40581 },
+            category: "category1",
+            title: "Метка 9",
+            description: "Описание метки 9",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13731, lng: 71.40629 },
+            category: "category1",
+            title: "Метка 10",
+            description: "Описание метки 10",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13561, lng: 71.40761 },
+            category: "category1",
+            title: "Метка 11",
+            description: "Описание метки 11",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13338, lng: 71.40675 },
+            category: "category1",
+            title: "Метка 12",
+            description: "Описание метки 12",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.11874, lng: 71.40131 },
+            category: "category1",
+            title: "Метка 13",
+            description: "Описание метки 13",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.11418, lng: 71.39954 },
+            category: "category1",
+            title: "Метка 14",
+            description: "Описание метки 14",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.10659, lng: 71.39678 },
+            category: "category1",
+            title: "Метка 15",
+            description: "Описание метки 15",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.11116, lng: 71.39842 },
+            category: "category1",
+            title: "Метка 16",
+            description: "Описание метки 16",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.10137, lng: 71.39575 },
+            category: "category1",
+            title: "Метка 17",
+            description: "Описание метки 17",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.10724, lng: 71.3979 },
+            category: "category1",
+            title: "Метка 18",
+            description: "Описание метки 18",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.11659, lng: 71.40737 },
+            category: "category1",
+            title: "Метка 19",
+            description: "Описание метки 19",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.11715, lng: 71.40543 },
+            category: "category1",
+            title: "Метка 20",
+            description: "Описание метки 20",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.1184, lng: 71.40181 },
+            category: "category1",
+            title: "Метка 21",
+            description: "Описание метки 21",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.12278, lng: 71.40327 },
+            category: "category1",
+            title: "Метка 22",
+            description: "Описание метки 22",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.12637, lng: 71.4102 },
+            category: "category1",
+            title: "Метка 23",
+            description: "Описание метки 23",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13144, lng: 71.40664 },
+            category: "category1",
+            title: "Метка 24",
+            description: "Описание метки 24",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13611, lng: 71.40847 },
+            category: "category1",
+            title: "Метка 25",
+            description: "Описание метки 25",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.14609, lng: 71.41558 },
+            category: "category1",
+            title: "Метка 26",
+            description: "Описание метки 26",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.14049, lng: 71.41794 },
+            category: "category1",
+            title: "Метка 27",
+            description: "Описание метки 27",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13481, lng: 71.41465 },
+            category: "category1",
+            title: "Метка 28",
+            description: "Описание метки 28",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13112, lng: 71.42726 },
+            category: "category1",
+            title: "Метка 29",
+            description: "Описание метки 29",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.13172, lng: 71.42489 },
+            category: "category1",
+            title: "Метка 30",
+            description: "Описание метки 30",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.12827, lng: 71.41576 },
+            category: "category1",
+            title: "Метка 31",
+            description: "Описание метки 31",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.12707, lng: 71.41347 },
+            category: "category1",
+            title: "Метка 32",
+            description: "Описание метки 32",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.12719, lng: 71.4227 },
+            category: "category1",
+            title: "Метка 33",
+            description: "Описание метки 33",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.12526, lng: 71.43303 },
+            category: "category1",
+            title: "Метка 34",
+            description: "Описание метки 34",
+            image: "https://via.placeholder.com/150",
+          }, 
+          {
+            position: { lat: 51.16558, lng: 71.4257 },
+            category: "category2",
+            title: "Метка 87",
+            description: "Описание метки 87",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.15621, lng: 71.43538 },
+            category: "category2",
+            title: "Метка 88",
+            description: "Описание метки 88",
+            image: "https://via.placeholder.com/150",
+          },
+          {
+            position: { lat: 51.17222, lng: 71.42588 },
+            category: "category2",
+            title: "Метка 89",
+            description: "Описание метки 89",
+            image: "https://via.placeholder.com/150",
+          },
+
+          // ... Добавьте остальные 300 меток
+
+        ];
+
+        // Использование в данных маркеров
+        if (markersData && Array.isArray(markersData)) {
+          markersData.forEach(function (markerData) {
+            var marker = createMarker(markerData.position, markerData.category);
+
+            // Добавляем обработчик события для открытия попапа при клике на маркер
+            google.maps.event.addListener(marker, "click", function () {
+              // Закрытие предыдущего попапа, если он был открыт
+              if (currentInfoWindow) {
+                currentInfoWindow.close();
+              }
+
+              var contentString = `
+                    <div class="popup-content">
+                        <h3>${markerData.title}</h3>
+                        <img src="${markerData.image}" alt="${markerData.title}">
+                        <p>${markerData.description}</p>
+                    </div>
+                `;
+
+              // Создание и открытие нового InfoWindow
+              var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+              });
+              infowindow.open(map, marker);
+
+              // Сохраняем ссылку на открытое окно, чтобы можно было его закрыть в следующий раз
+              currentInfoWindow = infowindow;
+            });
+
+            markersArray.push(marker);
+          });
+        } else {
+          console.error(
+            "Ошибка: markersData не является массивом или не определён"
+          );
+        }
+
+        // Скрытие попапа при клике вне
+        google.maps.event.addListener(map, "click", function () {
+          popup.style.display = "none";
+        });
+
+        // Добавление обработчика для изменения категории
+        document
+          .getElementById("category-select")
+          .addEventListener("change", function () {
+            var selectedCategory = this.value;
+            filterMarkersByCategory(selectedCategory);
+          });
+
+        // Функция фильтрации маркеров по категории
+        function filterMarkersByCategory(selectedCategory) {
+          markersArray.forEach(function (marker) {
+            if (
+              selectedCategory === "all" ||
+              marker.category === selectedCategory
+            ) {
+              marker.setMap(map); // Показываем маркер
+            } else {
+              marker.setMap(null); // Скрываем маркер
+            }
+          });
+        }
+
+        // Создание маркера с кастомизированным символом
+        function createMarker(position, category) {
+          return new google.maps.Marker({
+            position: position,
+            map: map,
+            icon: markerIcon[category] || markerIcon["category1"], // Используем символ по умолчанию
+            category: category,
+          });
+        }
+
+        // Пример создания меток с категориями
+        /* const locations = [
+          {lat: 51.14207, lng: 71.44542, category: 'category1', title: 'Метка 1'},
+          {lat: 52.14207, lng: 72.44542, category: 'category2', title: 'Метка 2'},
+          {lat: 53.14207, lng: 73.44542, category: 'category3', title: 'Метка 3'}
+        ];
+
+      locations.forEach(function(location) {
+        var marker = new google.maps.Marker({
+          position: {lat: location.lat, lng: location.lng},
+          map: map,
+          title: location.title,
+          category: location.category
+        });
+        markers.push(marker);
+      });*/
+      }
+
+      // Слушатель изменения категории
+      /*document.getElementById("category-select").addEventListener("change", function () {
+      const selectedCategory = this.value;
+
+      markers.forEach((marker) => {
+        if (selectedCategory === "all" || marker.category === selectedCategory) {
+          marker.setMap(map);
+        } else {
+          marker.setMap(null);
+        }
+      });
+    });*/
+    </script>
   </body>
 </html>

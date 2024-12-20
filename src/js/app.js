@@ -126,7 +126,18 @@ window.addEventListener("load", function () {
     }, { passive: true });
   }
 
+  // Текст дугой
+
+  // const texts = document.querySelectorAll('.services-steps text');
+  // texts.forEach(text => {
+  //   const svg = text.closest('svg');
+  //   const scaleFactor = svg.getBoundingClientRect().width / 300; 
+  //   text.style.fontSize = `${16 / scaleFactor}px`; 
+  // });
+
+
   // Swiper
+
   var portfolioSwiper = new Swiper(".portfolioSwiper", {
     slidesPerView: 1.2,
     spaceBetween: 0,
@@ -148,7 +159,37 @@ window.addEventListener("load", function () {
     }
   });
 
+  var servicesSwiper2 = new Swiper(".servicesSwiper2", {
+    direction: 'horizontal',
+    initialSlide: 1,
+    loop: true,
+    reverseDirection: true,
+    pagination: {
+      el: ".services-inner__pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".services-inner__next",
+      prevEl: ".services-inner__prev",
+    },
+  });
+
+  var servicesSwiper = new Swiper(".servicesSwiper", {
+    direction: 'horizontal',
+    loop: true,
+    reverseDirection: true,
+    pagination: {
+      el: ".services-inner__pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".services-inner__next",
+      prevEl: ".services-inner__prev",
+    },
+  });
+
   // Popup hide/show
+
   function hidePopup(popup) {
     popup.addEventListener('click', function(e) {
       const target = e.target;
@@ -208,5 +249,14 @@ window.addEventListener("load", function () {
     }
   });
 
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', () => {
+    handleScroll()
+    let sectionAnim = document.querySelectorAll('.section-anim');
+    sectionAnim.forEach( section => {
+      let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY > offsetTop - 200) {
+        section.classList.add('active');
+      }
+    })
+  });
 });

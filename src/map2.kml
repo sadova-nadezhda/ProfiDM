@@ -1,0 +1,2944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Карта без названия</name>
+    <description/>
+    <Style id="icon-1899-000000-nodesc-normal">
+      <IconStyle>
+        <color>ff000000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-000000-nodesc-highlight">
+      <IconStyle>
+        <color>ff000000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-000000-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-000000-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-000000-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0F9D58-nodesc-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0F9D58-nodesc-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0F9D58-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0F9D58-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-9C27B0-nodesc-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-9C27B0-nodesc-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-9C27B0-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-9C27B0-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-9C27B0-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-E65100-nodesc-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-E65100-nodesc-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-E65100-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-E65100-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-E65100-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-F57C00-nodesc-normal">
+      <IconStyle>
+        <color>ff007cf5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-F57C00-nodesc-highlight">
+      <IconStyle>
+        <color>ff007cf5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-F57C00-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-F57C00-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-F57C00-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FFD600-nodesc-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FFD600-nodesc-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFD600-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFD600-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFD600-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FFEA00-nodesc-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FFEA00-nodesc-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFEA00-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>СМАРТЫ</name>
+      <Placemark>
+        <name>№1 пр. Туран / шоссе Коргалжын, ТРЦ Keruen city, напротив Баня Керемет</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411631,51.144095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№2 шоссе Коргалжын / пр. Туран, остановка баня Керемет</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409798,51.146036,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№3 шоссе Коргалжын / остановка Бозарал, ЖК Кульсай  (рядом Harmony School, FIESTA HALL, Клиника Astana Vision, Maqsut Narikbayev University / Университет Максут Нарикбаев)</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.398362,51.147325,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№4 шоссе Коргалжын, АГЗС Gasenergy,  напротив Военный колледж им. Нурмагамбетова (бывш. Жас Улан)</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.375902,51.146707,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№6 шоссе Коргалжын, остановка Паралимпийский тренировочный центр, Ягуар Охотничий дом</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.393386,51.147712,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№7 шоссе Коргалжын / остановка жк Кульсай  Terra Motors Kia, Changan Auto, JAGUAR LAND ROVER</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.400537,51.146614,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№8 шоссе Коргалжын, остановка автоцентр Сарыарка</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.407615,51.145659,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№9 пр. Туран, отель Традициональ, напротив ТРЦ Сарыарка</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409131,51.139147,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№10 Мухамедханов / Туран, Бизнес-Центр CENTRO</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.405817,51.137673,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№11 ул. Кайым Мухамедханов / пр. Туран, напротив ТРЦ Сары Арка», театра Оперы и балета, БЦ Centro)  старое название (ул. Сарайшык театр Оперы и балета)</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40629,51.137312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№12 пр. Туран / Сарайшык напротив Театр оперы и балета Астана Опера</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.407613,51.135619,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№13 пр. Туран ТРЦ Хан Шатыр</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.406758,51.133383,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№14 пр. Туран / Керей-Жанибек хандар. Автоцентры ALLUR Chevrolet и ALLUR KIA, Гипермаркет АНВАР</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.401312,51.118747,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№15 пр. Туран, Магнум-Леор Ледовый дворец Барыс</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.399543,51.11418,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№16 пр. Туран, Ледовый дворец «Барыс-Арена»</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.396787,51.106592,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№17 пр. Туран, ЖК Сердце столицы</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.398426,51.111162,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№18 пр. Туран, ост. БЦ «THE SQUARE», ЖК Кен Дала</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.395758,51.101379,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№19пр. Туран, напртив . СК Барыс арена</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.397907,51.107243,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№20 ул. Керей / Жанибек хандар Центр крови, напротив Нац. научного онкологического центра</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40737,51.116598,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№21 ул. Керей / Жанибек хандар, Национальный научный онкологический центр, Mycar Astana</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40543,51.117152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№22 пр. Туран / ул. Керей-Жанибек хандар, остановка Национальный кардиологический центр, напротив Allur Kia</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.401814,51.118403,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№23 пр. Туран, ЦСО (центр соц. обслуж.) Жансая,  SANA Jaña Ūrpaq Ortalyğy Образовательный центр, напротив АНВАР</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.403278,51.12278,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№ 24ул. Сыганак / Кабанбай батыра, ЖК «Семь бочек», Мед. центр «Мейрим»</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.410205,51.126372,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№25 пр. Туран напротив ТРЦ Хан Шатыр, Ғашықтар саябағы / Парк влюбленных</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.406646,51.131444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№26 пр. Туран / Сарайшык, театр Астана Опера</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.408472,51.136117,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№27 шоссе Коргалжын / пр. Туран, ТРЦ Керуен Сити</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.415587,51.146096,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№28 пр. Кабанбай батыра, остановка гимназия №17, ЖК Триумфальный</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.417943,51.140493,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№29 пр. Кабанбай батыра / Кунаева, остановка Казмунайгаз, отель Hilton Garden Inn Astana</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.414659,51.134813,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№30 ул. Кунаева, остановка, отель Rixos President Astana, напротив министерств Пром. Строительства и Транспорта</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.427267,51.131122,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№ 31 ул. Кунаева	/ ул. Акмешит, остановка КТЖ</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424896,51.131728,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№32 Достык / Кабанбай батыра Мечеть мечеть Аль-Фараби, напротив ТРЦ Азия Парк</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.415768,51.128278,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№33 пр. Кабанбай Батыра, мечеть Аль-Фараби, напротив  ТРЦ Азия Парк</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.413476,51.127076,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№34 ул. Достык / Сауран, остановка ТРЦ Керуен</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.422707,51.12719,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№35 ул. Достык / Туркестан, остановка Talan Towers</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.43303,51.12526,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№36 пр. Мангилик ел. Дом Министерств правое крыло</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.43791,51.125218,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№37 пр. Мангилик Ел. Дом Министерств, левое крыло</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.440171,51.13051,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№38 ул. Сарайшык / ул. Акмешит, Лазурный квартал</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.429303,51.134409,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№39 ул.Сарайшык, 34 а, Dara Residence, жилой комплекс</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.432799,51.133169,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№40 Байтурсынова напротив ЖК Хайвилл</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.467509,51.124945,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№41 ул. Байтурсынова, остановка Дворец мира и согласия»</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.465434,51.125792,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№ 42 пр. Кошкарбаев / пр. Тауелсиздик, остановка БЦ Downtown, жк Хайвилл</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.461454,51.128766,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№43 пр. Тауелсиздик, Хайвил Астана блок E-2, Остановка Мечеть Хазрет Султан</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.469451,51.126343,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№44 пр. Тауелсиздик, Пирамида – Дворец мира и согласия, напротив площадь Қазақ елі / Казак ели</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.467205,51.121084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№45 ул. Нажимеденова, остановка Нажимеденова, Президентский Парк</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.465189,51.120045,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№46 ул. Нажимеденова / Тауелсиздик, жк Гранд Астана</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.463741,51.120434,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№47 пр. Тауелсиздик, остановка жк Гранд Астана, Национальный музей РК</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.46732,51.118718,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№ 48 пр. Кабанбай Батыра, Astana International University, напротив Цирк</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420578,51.14364,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№49 шоссе Коргалжын, остановка Океанариум, Ailand</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.418052,51.146872,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№50 пр. Мангилик ел / Улы дала остановка жк Променад Экспо / Promenade Expo Block С, направление Аэропорт</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.425825,51.093545,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№51 пр. Мангилик ел, остановка БЦ Аура, БЦ Байтерек</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424391,51.090007,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№52 Мангилик ел / Рыскулова ЖК Nexpo Union, направление Аэропорт</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.422978,51.085338,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№ 53 пр-т. Мангилик Ел. 17 ЖК Коркем напротив Гимназии №77,Генеральная прокуратура</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.43424,51.116855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№ 54 пр.Мангилик ел Финансовый центр</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.435378,51.118146,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№55 пр. Мангилик ел / Е 496 со стороны главной мечети, напротив жк Talmas, направление аэропорт</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420291,51.077903,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№56 пр. Мангилик ел, остановка - детский сад Карлыгаш 2, со стороны главной мечети, напротив жк Аман, направление аэропорт</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.41589,51.065938,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№57 пр. Мангилик ел / Е 319, остановка Канал Нура-Есиль, Gasenergy АЗС №Z-24</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.41428,51.06167,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№58 пр. Мангилик ел / Е 319, остановка Канал Нура-Есиль, Gasenergy АЗС №Z-25</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.415106,51.061522,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№59 пр. Мангилик ел, остановка Е 319, Amal hotel, жк Khan Plaza</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.417117,51.067333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№60 пр. Мангилик ел, остановка - детский сад Карлыгаш 2, жк Sati park house</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.418803,51.071638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№61 пр. Мангилик ел / Е 496, остановка Больница Медицинского центра УДП РК</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420348,51.076074,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№62 Мангилик ел Хусейн бен Талал ЖК Экспо Сити</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.421934,51.080897,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№63 Мангилик ел / Рыскулова ЖК Arai Towers, направление Триумфальная арка</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.423369,51.084821,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№64 пр.Мангилик ел, жк Orynbor Towers (напротив сферы Нұр Әлем EXPO)</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424777,51.08808,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№65 пр. Мангилик ел / Улы дала, остановка жк Променад Экспо, направление Триумфальная арка</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.426181,51.092485,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№66 пр. Кабанбай батыра на мост Караоткель, напротив The St. Regis Astana, Зал торжеств Салтанат Сарайы</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424979,51.149225,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№67 ул.Ташенова / ул.Таха Хусейн парк им. Жабаева, Спорткомплекс Алатау</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.446551,51.151986,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№68 ул. Ташенова / ул. Кравцова напротив Римско-Католического прихода, дворца спорта Алатау</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.450918,51.154112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№69 ул.Ташенова / ул.Таха Хусейн напротив отеля San Marino</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.44318,51.152121,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№70 Ташенова, посольство Турции</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.434417,51.152796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№71 ул. Бараева, Жастар, БЦ LIGA</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.438009,51.158519,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№72 ул. Бараева, Банк Центр Кредит</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.435835,51.157572,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№73 пр. Женис, остановка КазНУИ, сквер Акжайык</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411767,51.174022,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№74 пр. Богенбай батыра / пр. Сарыарка, остановка ТД Коктем</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.407142,51.175575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№75ул. Тлендиева, школа 18</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.398693,51.175776,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№76 пр. Сарыарка / пр. Богенбай батыра, КазАТУ - Казахский агротехнический исследовательский университет им. С. Сейфуллина</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412525,51.176115,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№77 пр. Богенбай батыра / пр. Женис, остановка Богенбай б., сквер Акжайык</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.408525,51.175281,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№ 78пр. Богенбай батыр / ул. Желтоксан, Прокурорский дом, Сквер Акжайык</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412738,51.175693,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№79 пр. Женис / ул. Сейфуллина, Астана Плаза, Каспий Банк, ТД Азат</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.41215,51.171082,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№80 пр. Женис / ул. Сейфулина, остановка департамент юстиции, кафе SF</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412968,51.168615,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№81 пр. Сарыарка / Сейфулина, остановка агентство Хабар</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40809,51.169855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№82 пр. Сарыарка / Сейфулина, Бизнес-Центр Бурлин</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.407929,51.168651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№83 пр. Сарыарка, McDonald`s, остановка Кенесары</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409946,51.161691,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№84 Кабанбай батыра с моста Караоткель, , Зал торжеств Салтанат Сарайы, отель St. Regis Astana</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424848,51.149647,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№85 ул. Кажымукан / Проспект Магжана Жумабаева, напротив ЕНУ и Парк Афганской войне</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.469333,51.154686,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№86 ул. Кажымукан, остановка ЕНУ - Евразийский национальный университет Гумилева, сквер жертвам Чернобыльской трагедии</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.472176,51.155844,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>БРЕНДЫ</name>
+      <Placemark>
+        <name>ул. Кенесары-пр. Республики</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.425706,51.165586,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Пр. Республики –Сейфуллина, АЗС КМГ</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.425885,51.172224,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул.Бараева, 2А</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.435387,51.156217,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул.Бараева, 2Б</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.435658,51.156547,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сары Арка Кенесары </name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.408604,51.163539,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Лед ЭКРАНЫ</name>
+      <Placemark>
+        <name>пр. Республики / Кенесары, правый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.427977,51.165858,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул.Сейфуллина/ул. Бейбитшилик ПУЧА (напротив Береке банк, ForteBank) правый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420424,51.171048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Пересечение пр. Кабанбай батыра / ул. Сарайшык, McDonald's левый берег]]></name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.416301,51.136533,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык / Кабанбай Батыра, отель Жумбактас, левый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.416392,51.136553,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык, Лазурный квартал, левый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.425171,51.135027,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Акмешит / ул. Кунаева, левый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.429021,51.130668,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Абылайхана / Бауыржана Момышулы, правый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.503915,51.14713,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай батыра / ул. Достык, напротив ТРЦ «Азия Парк», левый берег, 1 сторона</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.413933,51.128762,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр-т Кабанбай батыра / Достык направление Хан Шатыр, левый берег, 2 сторона</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.41404,51.128749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Кабанбай батыра / Сыганак, Мечеть Аль-Фараби, 1 сторона, левый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.413886,51.125784,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Сыганак / Кабанбай батыра, Мечеть Аль-Фараби, сторона 2, левый берег</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.41395,51.125774,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Республики / Ташенова, напротив посольство Турции</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.434786,51.15201,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран-Коргальжинское шоссе, БЦ TIME.</name>
+        <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.410719,51.146487,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сауран / Сыганак,</name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.423372,51.124281,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>УЛ. БУХАР ЖЫРАУ / УЛ. АКМЕШИТ, сторона 1 </name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.418577,51.100917,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>УЛ. БУХАР ЖЫРАУ / УЛ. АКМЕШИТ, сторона 2 </name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.418601,51.10085,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Улы Дала / Туркестан, левый берег, сторона 1 </name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420373,51.096855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Улы Дала / Туркестан, левый берег, сторона 2 </name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420341,51.096908,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Улы Дала / Туркестан, левый берег, сторона 3 </name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.42032,51.096869,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Мангилик Ел 17, ЖК «Коркем» левый берег</name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.433848,51.11671,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Мангилик ел, дом министерств, левый берег</name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.438391,51.12193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сыганак / пр. Мангилик Ел, левый берег</name>
+        <styleUrl>#icon-1899-FFD600-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.43831,51.121928,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Ситиборды</name>
+      <Placemark>
+        <name>Ул. Кошкарбаева, жк Highvill Хайвил, 
+напротив - БЦ Downtown, жк La Vie - Orda Invest Орда Инвест, Посольство США</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.460754,51.12886,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Кошкарбаева / ул. Акыртас, жк Хайвил, напротив БЦ Downtown, Посольство США</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.46268,51.128606,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Кошкарбаева / пр. Тауелсиздик Хайвил Астана блок G, напротив посольства США, Посольство ОАЭ, мечеть Әзірет Сұлтан</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.469126,51.12764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Кошкарбаева /ул. Акыртас , БЦ Downtown, жк La Vie - Orda Invest Орда, Посольство США, напротив ЖК Highvill</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.4624,51.128978,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Кошкарбаева, БЦ Downtown, жк La Vie - Orda Invest Орда Инвест, Посольство США, напротив ЖК Highvill Хайвил</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.460905,51.129213,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Момышулы / ул. Кошкарбаева, жк Виктория, БЦ Bcc center, Astana Music Hall, Парк им. Момышулы </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.458957,51.130995,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Калдаякова / ул. Панфилова
+жк Гранд Астана Elite, Французский квартал, Highvill Ishim, Президентский парк</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.451864,51.119399,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Ш.Калдаякова 4, ЖК «Итальянский Квартал», напротив жк Хайвилл Ishim Ишим</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.455557,51.118824,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Ш. Калдаякова, ЖК Monaco Residence, ГО KEGOC </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.462461,51.117765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Проспект Тауелсиздик/ ул. Шамши Калдаяков, жк Гранд Астана, ГО KEGOC, напротив Национальный музей РК </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.46636,51.118477,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Проспект Мангилик Ел, Мост Марал, авторазвязка Дом министерств</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.441518,51.134146,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Достык / ул. Сауран, напротив ТРЦ Keruen</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424313,51.126658,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Достык / ул. Сауран,  ТРЦ Keruen</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424431,51.126881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Достык / Туран, отель «MARRIOTT» «Фитнес Палас» ресторан «Brewery» «Бреверри», ТРЦ «Азия парк»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.407256,51.129393,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Кунаева, КТЖ, напротив отель «RIXOS»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.422129,51.131922,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Кабанбай батыра, напротив ЖК «Триумф Астаны»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.418282,51.140164,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / ул. Сарайшик, ТРЦ «Сарыарка»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409597,51.138984,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[пр. Туран, БЦ Туран 18, ТРЦ «Keruen City Керуен Сити»
+ напротив Zoloto Restaurant & Karaoke]]></name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.410907,51.142409,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / ул. Кунаева, ТРЦ Хан Шатыр напротив Астана-Опера</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.407432,51.134781,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / Достык, ТРЦ Хан-Шатыр, ЖК Evolution, напротив Fitness Palace </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.405298,51.12943,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр.Туран, Ледовый дворец БАРЫС</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.399448,51.113596,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / ул. Бухар жырау , Qazaqstan Легкоатлетический спортивный комплекс
+Жк Сердце столицы</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.396288,51.104649,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / Улы Дала, жк Кен Дала, напротив автосалонов Mercedes-Benz и Jetour Terra Motors</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.395556,51.100898,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / ул. Бухар жырау, напротив Qazaqstan Легкоатлетический спортивный комплекс, жк Medina Tower, Sport Towers</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.396163,51.102738,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / шоссе Коргалжын, ТРЦ «Keruen City Керуен Сити» напротив отель Думан</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412352,51.149457,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран, посольство Греции, напротив Центральный парк</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412422,51.151986,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра, Государственный флаг Республики Казахстан, Ресторанный комплексСалтанат Сарайы</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424373,51.149401,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра, Цирк, жк Avenue 5, ТРЦ «Keruen City»,
+ напротив Astana International University</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420133,51.14371,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра, Astana International University, напротив Цирк</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420756,51.143999,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра / Сарайшык, ЖК «Триумфальный</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.416397,51.137838,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Кабанбай батыра / Д. Кунаева, отель Hilton Garden Inn Astana, «Халык Банк», Бизнес-центр Q2</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.414558,51.134547,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра, Акимат, Налоговая района Нура, Автоцентр-Бавария Астана, Назарбаев Университет Школа медицины</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411988,51.120881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра / ул. Алматы, Mycar Astana, Hyundai Premium Astana, LEXUS ASTANA</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411364,51.117341,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай батыра, ЖК «Будапешт» ближе к кольцу Астана- Аэропорт</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.399281,51.080723,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра / Улица Керей-Жанибек хандар, жк TORONTO, жк Инфинити, напротив автосалонов</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411823,51.117309,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык / пр. Кабанбай батыр жк Астория, жк Триумфальный, Посольство Канады, ТРЦ Сарыарка </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.414161,51.136796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык / пр. Кабанбай батыра, отель Hilton Garden Inn Astana, БЦ «Q»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.414035,51.136515,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык/ ул. Акмешит жк Дипломат, Dara Residence</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.429935,51.133911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык «Макдональдс», отель «Жумбактас», рестораны «Абай», Ганбей», «Пивоваров»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.41842,51.136165,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык / ул.Туркестан, жк Арайлым,
+напротив – ресторан Бургер Кинг, парк «Жетысу» </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.434849,51.133087,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык / ул. Туркестан, Burger King, парк Жетісу, авторазвязка Дом Министерств</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.435783,51.133248,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык / Туркестан, ЖК Авиценна-Элит, Банк RBK, напротив - жк Dara Residence.</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.433612,51.133565,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык / ул. Акмешит, жк Авиценна, жк Авиценна-Элит</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.429329,51.134297,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык жк Лазурный квартал, маркет Гастроном, напротив Дипломатический городок</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.426359,51.13482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сагынак / пр. Туран, Тойота Центр Есиль,
+напротив НЦ Материнства и Детства РК, ТД Festival Avenue, БЦ Sat Tower</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.402496,51.127145,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сыганак / пр. Туран, ЖК BI City Seoul, около маг.Диона , ЖК Зеленый квартал”</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.398116,51.128088,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сагынак / Улица Толе би, напротив маг. Диона
+ Helios АЗС №20, Автоцентр «Тойота центр Есиль»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.397467,51.127738,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[ул. А. Бараева 19, Erlan&Erke, напротив - БЦ Лига]]></name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.438014,51.158883,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Бараева, сквер перед автобусной остановкой</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.436653,51.158016,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Бараева, магазин «Жастар», Kaz Flor КазФлор, ТД «Foliant»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.443515,51.158063,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Кенесары, БЦ «7 Континент», напротив АО Казактелеком</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.435568,51.166369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Ташенова / пр. Тауелсиздик, СК «Алатау»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.45272,51.154594,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Ташенова, напротив СК «Алатау»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.45222,51.154686,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Ташенова, напротив Посольства Турции</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.434322,51.152365,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Мост Ташенова, ЖК Akbulak Riviera, напротив ТД Мечта</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.444436,51.149593,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Амман/Ташенова мост через Акбулак, сторона ТД Мечта</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.444825,51.149571,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[ул. Амман / ул. Шарль де Голль жк Миланский квартал, БЦ Статус , отель The Veil Taste & Relax, Посольство Кувейт]]></name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.445426,51.142074,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Момышулы, ТЦ «Анвар», Энергосбыт, ТД «Рахмет»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.473112,51.138393,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Республики/ул. Сейфуллина, ТД «Нур-Тау», Технодом, 7 КАНАЛ</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.425208,51.172393,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ситиборд пр. Республика-Богенбай Батыра напротив ТЦ «Алма»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424655,51.175683,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Республики / пр. Богенбай батыра</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.423712,51.177811,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Женис (Победы), напротив КазНУИ Музыкальная академия</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411949,51.173538,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Женис (Победы), Аграрный университет, направление ЖД вокзал</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.4081,51.187537,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Богенбай батыра / пр. Желтоксан, Mechta.kz 
+Магазин бытовой техники</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.413076,51.176164,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Пр.Богембай батыра / ул. Желтоксан, напротив Mechta.kz -Магазин бытовой техники</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.413226,51.175796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Богенбая / пр. Сарыарка, GulMarket цветочная лаборатория,
+напротив ТД Коктем</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409085,51.175747,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Сарыарка, Медицинская Академия</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.406479,51.173971,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Сарыарка / Жангельдина, ТД Караван, напротив Нац гвардия РК   </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.407037,51.172067,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Сарыарка / ул.Сейфуллина, Хабар, напротив СК «Астана</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40797,51.170224,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сейфуллина/пр. Сарыарка, СК «Астана»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.4093,51.169563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Шоссе Коргалжын, ЖК «Кульсай», «TERRA MOTORS КИА», Охотничий дом Ягуар, Ресторанный комплекс Shatush, Банкетный зал FIESTA HALL</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.395657,51.1477,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Шоссе Коргалжын, Военный колледж, сеть Small, напротив - Автосалон Автомир Geely, Бизнес Центр "Korgalzhyn"]]></name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.384211,51.148531,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Шоссе Коргалжын, Автосалон Автомир Geely, Бизнес Центр «Korgalzhyn», напротив - Военный колледж, сеть Small.</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.384262,51.148235,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Майлина / пр. Тауелсыздык, КУИС МВД, напротив отель «Тенгри», ТД «Astana Mall», ЦОН</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.464833,51.142084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Тауелсыздык, ТЦ «Astana Mall</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.464345,51.140419,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Тауелсыздык, ТД «Акбота»,
+ напротив Акимат р-на Алматы, Загс, 1 гор больница</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.457779,51.149625,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ул. Кажымукана Мунайтпасова, ТД Туркестан
+напротив бильярдного клуба Zodiak </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.464632,51.153363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сатпаева / ул. А. Петрова, напротив ТЦ «Евразия-1», McDonald’s</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.470854,51.148516,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сатпаева / ул. А. Петрова, напротив ТЦ «Евразия-1», McDonald’s</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.470288,51.148736,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сатпаева / ул.Майлина, ТД «Жайлы</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.472674,51.14543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул.Сатпаева-Куйши Дина,ТРЦ Евразия 2</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.4721,51.146745,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сатпаева, ТД «Мечта», напротив ТРЦ Евразия</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.471102,51.147668,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сатпаева, дом 8 , напротив mega arzan</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.46923,51.15081,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сатпаева, СК Казахстан</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.467371,51.152912,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Жирентаева, Автомойка 999,
+ напротив ТРЦ «ЕВРАЗИЯ 3»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.474963,51.149079,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Абылай хана / ул. Жансугурова Helios АЗС №8,
+ (недалеко ТРЦ Аружан)</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.481346,51.156198,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Абылайхана, ТД «Милана», напротив ТД «Встреча»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.483799,51.155255,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Н. Тлендиева, СР «Эталон»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.391795,51.177182,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Н. Тлендиева, КОМЕК МАШИНЕРИ дистрибьютор Komatsu, напротив Автосалона Астэк </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.387408,51.178261,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Н. Тлендиева, ТЦ «Рахмет»</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.376605,51.180617,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Ш. Кудайбердыулы, гостиница АЗАМАТ, Онко центр на Манаса</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.490826,51.159717,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Ш.Кудайбердыулы, канал Акбулак,
+напротив Toyota Center Astana Тойота Центр Астана, Hyundai Astana</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.476845,51.164978,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Ш.Кудайбердыулы,
+напротив Toyota Center Astana Тойота Центр Астана, Hyundai Astana, SUBARU MOTOR ASTANA</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.479748,51.164013,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Шоссе Алаш, напротив Центральный рынок, SMALL</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.466045,51.194151,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Шоссе Алаш, по направлению Магнум</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.472356,51.196335,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай батыра-ул. Сарайшык</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.416336,51.13658,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ул. Сауран/Сагынак (поворот на ТРЦ Керуен</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.42348,51.124271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык, Лазурный квартал</name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.425261,51.135028,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Трасса Аэропорт - Астана, направление в город, 
+первые от кольца , зеркалка, левый берег </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.403459,51.065954,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Трасса Астана-Аэропорт, направление в Аэропорт, 
+первые от кольца , зеркалка, левый берег </name>
+        <styleUrl>#icon-1899-000000-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.403005,51.065929,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Мюпи</name>
+      <Placemark>
+        <name><![CDATA[№1 MUPI пр.Туран,  Развлекательный Центр "Айланд" Отель "Думан" ТРЦ "Keruen City" Колесо Обозрения.]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412803,51.153126,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№2 MUPI пр. Туран / ул. Достык,  ТРЦ «Хан Шатыр» корпорация «Казахмыс»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.402549,51.130367,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№3 MUPI пр. Туран,  ТРЦ " Keruen City " «ZOLOTO», Улица ресторанов, Баня Керемет]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.410839,51.143422,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№4 MUPI пр. Туран 
+ТРЦ «Сары Арка» ЖК «GRAND OPERA» </name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409913,51.139778,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№5 пр.Туран / Сыганак,  БЦ "SAAD" Медицинский центр «Материнства и детства»]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.404249,51.1252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№6 MUPI пр. Туран / ул. Достык,  ТРЦ "Хан Шатыр" отель "Марриотт", "Фитнес палас]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.404517,51.129765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№7 MUPI пр.Туран / Керей-Жанибек хандар.  Автоцентр «Jac Allur Auto», ЖК «Алтын шар», кофейня «Marrone Rosso»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.400647,51.116943,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№8 MUPI пр. Туран, Magnum Cash & Carry, Ледовый Дворец «Барыс»]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.400467,51.114595,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№9 MUPI пр.Туран,  «Национальный центр детской реабилитации»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.402362,51.121731,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№10 MUPI пр.Кабанбай Батыра / Кунаева,  ГБ"Халык Банк" посольство Эстонии, Посольство Китая]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.414911,51.134366,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№11 MUPI пр.Кабанбай Батыра,  отель «Жумбактас», "Макдональдс, Триумф Астаны]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.417356,51.138651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№12 MUPI ул. Кунаева, 
+Отель Rixos President Astana, НК Қазақстан темір жолы</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.417807,51.132839,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№13 MUPI пр.Кабанбай Батыра
+ «Столичный Цирк», ЖК «Триумф»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420774,51.14469,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№14 MUPI ул.Кунаева / Туркестан, Монумент "Байтерек" БЦ "Астаналык«, БЦ "Нурсая“]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.434557,51.129971,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№15 MUPI ул. Достык  ТРЦ «Керуен», монумент «Байтерек», «Министерство Обороны»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.430601,51.125938,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№16 MUPI ул. Достык / Сауран  Мечеть «Аль Фараби», ГБ «ForteBank»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.419197,51.127448,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№17 MUPI ул. Сарайшык  ЖК "Лазурный квартал«, ЖК Атлант, Отель Риксос Астана]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.425983,51.134556,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№18 MUPI ул. Сарайшык ЖК  "Лазурный квартал" ЖК Атлант, Отель Риксос Астана]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.422951,51.135441,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№19 MUPI пр.Мангилик ЕЛ / Кунаева  "Дом Министерств" "Сенат Парламента РК]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.438161,51.12966,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№20 MUPI пр.Мангилик ЕЛ / Бухар Жырау,  ЖК «TriumphAvenue»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.429207,51.100992,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№21 MUPI пр.Мангилик ЕЛ / Алматы РФМШ, Конституционный суд</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.432486,51.115393,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№22 MUPI пр. Мангилик Ел / Достык  Бизнес центр "Санкт Петербург«, Бизнес Центр «Москва»]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.436197,51.125084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№23 MUPI пр.Мангилик ел/ Улы дала,  Автохозяйство Управления делами Президента Республики Казахстан,ЖК Dream city</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.427598,51.096684,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№24 MUPI пр.Мангилик Ел,  Дом Министерств правое крыло</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.438631,51.128274,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№25 MUPI пр.Мангилик ел / Орынбор  ДС «Карлыгаш» Аллея "Улытау“]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.430817,51.107627,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№26 MUPI пр.Мангилик ел / Бухар жырау  Триумфальная арка «Мәңгілік ел»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.432374,51.111868,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№27 MUPI пр.Мангилик ел – Керей Жанибек хандар,  ЖК « Айсанам De Luxe»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.434426,51.112752,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№28 пр.Мангилик ел / Керей Жанибек хандар,  ЖК «Акжайык»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.431948,51.113372,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№35 MUPI Шоссе Коргалжын/ ул. Аягоз,  автоцентры KIA TERRA MOTORS Jaguar LAND ROVER, Сарыарка</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.404406,51.146401,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№29 MUPI ул. Нажимеденова / Аманжолова   «Национальный музей РК»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.47162,51.119482,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№30 MUPI ул.Аманжолова,  университет искусств «Шабыт», Әзірет Сұлтан мешіті</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.459794,51.127282,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№31 MUPI ул.Аманжолова,  ЖК «Милениум Парк» дворец «Независимости»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.477058,51.123226,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№32 MUPI ул. Мухамедханова,  строительная компания «Tumar Grand Village»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.382911,51.140665,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[№33 MUPI ул. Мухамедханов / Домалак ана AISHA BIBI APART HOTEL&SPA]]></name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.394305,51.13874,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№34 MUPI пр.Богембай Батыра / Женис,  напротив парк «Акжайык»</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411144,51.174487,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№36 MUPI ул. Байтурсынова ЖК«Higvill», дворец «Мира и Согласия» (Пирамида)</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.462508,51.126402,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№37 MUPI пр.Кабанбай Батыра, посольство КНР, напротив Mc Donald`s</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.416885,51.136106,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№38 пр.Туран, «Центральный парк» MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412714,51.148252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№39 ул. Нажимеденова, «Президентский Парк» MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.457518,51.120764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№40 MUPI ул. Нажимеденова, ЖК «Highvill Ishim», Дворец Мира и Согласия (Пирамида)</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.458548,51.120386,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№41 MUPI ул. Кошкарбаева / Аманжолова, «Казахско-Турецкий лицей</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.474086,51.124052,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№42 MUPI пр.Тауелсиздик / ул.Нажимиденова напротив Национального музея РК</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.466502,51.118962,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№43 MUPI ул. Кошкарбаев /Тауелсыздык,  Бизнес Центр DOWN-TOWN, ЖК Highvill</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.46507,51.128583,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№44 ул.Кенесары пр.Сары Арка, McDonald`s MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.412963,51.16368,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№45 ул. Кенесары / пр. Женис,  Центральный стадион им. Мунайтпасова MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411955,51.16333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№46 пр.Сары Арка / ул.Абая, 
+Акимат района Сарыарка MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40888,51.165156,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№47 пр. Сары Арка ул.Абая, университет «Астана» MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409369,51.165223,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№48 пр. Сары Арка ул. Богембай Батыра, Мед. Университет MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.406409,51.17421,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№49 ул. Байтурсынова, мечеть «Хазрет Султан« MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.47056,51.124308,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>№50 ул. Бараева, БЦ «Лига», отделение «Народный Банк» MUPI</name>
+        <styleUrl>#icon-1899-0F9D58-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.441164,51.159039,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>ЭКРАНЫ Abu-Dhabi Plaza</name>
+      <Placemark>
+        <name>ЭКРАНЫ Abu-Dhabi Plaza фасад здания, Литейный парк</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.426908,51.121256,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ЭКРАНЫ Abu-Dhabi Plaza фасад здания, Литейный парк</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.428115,51.121061,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ТОТЕМЫ Abu-Dhabi Plaza (4 экрана): Сыганак ул. / Акмешит ул</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.42706,51.123012,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Сыганак ул. / Туркестан ул. </name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.429772,51.122427,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Диджитал борды</name>
+      <Placemark>
+        <name>ул. Достык-ул. Сауран, напротив ТРЦ Keruen Керуен</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424293,51.126652,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Достык- ул. Сауран, ТРЦ «Keruen Керуен»</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.424455,51.126875,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран, шоссе Коргалжын, ТРЦ «Keruen City Керуен Сити» напротив отель Думан</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.41237,51.149481,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра, Astana International University, напротив Цирк</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.420739,51.143973,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Мост Ташенова, ЖК Akbulak Riviera, напротив ТД Мечта</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.444426,51.14961,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул.Амман-Ташенова мост через Акбулак, сторона ТД Мечта</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.444852,51.149519,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра, Комплекс «Салтанат Сарайы» отель The St. Regis Astana</name>
+        <styleUrl>#icon-1899-F57C00-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.42546,51.150193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык - ул. Туркестан, жк Арайлым, напротив – ресторан Бургер Кинг, парк «Жетысу»</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.434834,51.133085,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сарайшык -Туркестан, ЖК Авиценна-Элит, Банк RBK, напротив - жк Dara Residence.</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.433635,51.133558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран - ул. Сарайшик, ТРЦ «Сарыарка»</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.409572,51.138923,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сагынак / пр. Туран, Тойота Центр Есиль,
+напротив НЦ Материнства и Детства РК, ТД Festival Avenue, БЦ Sat Tower</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40245,51.127129,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Сагынак / пр. Туран, ЖК BI City Seoul 
+Напротив Тойота Центр Есиль, НЦ Материнства и Детства РК, ТД Festival Avenue, БЦ Sat Tower</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.402562,51.127505,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / ул. Сарайшик, ТРЦ «Хан-Шатыр, Астана-Опера, аллея Ресторанов</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.40909,51.139005,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ул. Бараева, сквер перед автобусной остановкой</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.436673,51.158021,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Республики/ул. Сейфуллина, ТД «Нур-Тау», Технодом, 7 КАНАЛ</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.42518,51.17238,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр Момышулы ( р - н Дворца Школьников)</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.46033,51.133937,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Кабанбай Батыра, Акимат, Налоговая района Нура, Автоцентр-Бавария Астана, Назарбаев Университет Школа медицины</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.411975,51.12086,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>пр. Туран / ул. Бухар жырау, напротив Qazaqstan Легкоатлетический спортивный комплекс, жк Medina Tower, Sport Towers</name>
+        <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            71.396213,51.102831,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
