@@ -1838,6 +1838,7 @@ input.file {
   .popup-caption {
     font-size: 16px;
     font-weight: 400;
+    font-family: "Atyp Text";
   }
   .popup-img {
     width: 100%;
@@ -1846,6 +1847,7 @@ input.file {
   .popup-txt {
     font-size: 14px;
     font-weight: 400;
+    font-family: "Atyp Text";
   }
   .gm-style-cc {
     display: none;
@@ -1865,6 +1867,9 @@ input.file {
   }
   .gm-style .gm-style-iw-tc::after {
     background: rgb(18, 16, 16);
+  }
+  .gm-ui-hover-effect>span {
+    background-color: #fff;
   }
 }
 
