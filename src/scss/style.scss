@@ -1821,34 +1821,40 @@ input.file {
       background: url(../img/filter.svg) center / contain no-repeat;
     }
   }
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #121010;
+  }
 }
 
 /* Стиль для кастомного попапа */
 .custom-popup {
   position: absolute;
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   display: none;
   z-index: 1000;
-  max-width: 250px;
+  max-width: 182px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #121010;
 }
 
 .custom-popup img {
   width: 100%;
-  border-radius: 4px;
+  height: 150px;
+  border-radius: 0;
 }
 
 @media all and (max-width: 768px) {
   #map {
-    height: 70vh; /* Используем 70% от высоты окна браузера */
+    height: 70vh;
   }
 }
 
 @media all and (max-width: 480px) {
   #map {
-    height: 80vh; /* Для очень маленьких экранов можно сделать карту еще выше */
+    height: 80vh;
   }
 }
 
