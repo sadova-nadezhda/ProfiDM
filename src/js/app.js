@@ -7,7 +7,7 @@ function addPadTop(section) {
   section.style.marginTop = `${header.offsetHeight}px`;
 }
 
-function handleScroll() {
+function headerScroll() {
   if (window.innerWidth > 980) {
     const currentScroll = window.scrollY;
     if (currentScroll <= 0) {
@@ -137,10 +137,6 @@ window.addEventListener("load", function () {
     spaceBetween: 0,
     centeredSlides: true,
     loop: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
     navigation: {
       nextEl: ".portfolio-gallery__prev",
       prevEl: ".portfolio-gallery__next",
@@ -186,12 +182,11 @@ window.addEventListener("load", function () {
     direction: "vertical",
     slidesPerView: 2,
     spaceBetween: 80,
-    mousewheel: false,
+    speed: 1500,
     breakpoints: {
       768: {
         slidesPerView: 1.05,
         spaceBetween: 50,
-        mousewheel: true,
       },
     }
   });
@@ -199,12 +194,11 @@ window.addEventListener("load", function () {
   var clientsCards = new Swiper(".clientsCards", {
     slidesPerView: 2,
     spaceBetween: 0,
-    mousewheel: false,
+    speed: 1000,
     breakpoints: {
       768: {
         slidesPerView: 3,
         spaceBetween: 0,
-        mousewheel: true,
       },
     }
   });
@@ -217,7 +211,7 @@ window.addEventListener("load", function () {
         servicesCards = new Swiper(".servicesCards", {
           slidesPerView: 3,
           spaceBetween: 0,
-          mousewheel: true,
+          speed: 1000,
         });
       }
     } else {
@@ -234,74 +228,88 @@ window.addEventListener("load", function () {
   var benefitsCards = new Swiper(".benefitsCards", {
     slidesPerView: 1,
     spaceBetween: 8,
-    mousewheel: false,
+    speed: 1000,
     breakpoints: {
       768: {
         slidesPerView: 2,
         spaceBetween: 0,
-        mousewheel: true,
       },
       981: {
         slidesPerView: 3,
         spaceBetween: 0,
-        mousewheel: true,
       },
     }
   });
 
-  // Popup hide/show
+  // Управление прокруткой и слайдером
+  function handleScroll(event, swiper) {
+    if (!swiper) return; // Если слайдер не определен, выходим из функции
 
-  function hidePopup(popup) {
-    popup.addEventListener('click', function(e) {
-      const target = e.target;
-      if (
-        target.classList.contains("popup__close") ||
-        target.classList.contains("popup")
-      ) {
-        popup.style.transition = "opacity 0.4s";
-        popup.style.opacity = "0";
-        setTimeout(() => {
-          popup.style.display = "none";
-        }, 400);
+    if (swiper.isEnd && event.deltaY > 0) {
+      window.removeEventListener("wheel", stopScroll, { passive: false });
+      window.addEventListener("wheel", enableScroll, { passive: false });
+    } else if (swiper.isBeginning && event.deltaY < 0) {
+      window.removeEventListener("wheel", stopScroll, { passive: false });
+      window.addEventListener("wheel", enableScroll, { passive: false });
+    } else {
+      event.preventDefault();
+      if (event.deltaY > 0) {
+        swiper.slideNext();
+      } else {
+        swiper.slidePrev();
+      }
+    }
+  }
+
+  // Функция для управления прокруткой и слайдами
+  function stopScroll(event) {
+    const sections = [
+      { element: document.querySelector(".clients"), swiper: clientsCards },
+      { element: document.querySelector(".services"), swiper: servicesCards },
+      { element: document.querySelector(".portfolio"), swiper: portfolioCards },
+      { element: document.querySelector(".benefits"), swiper: benefitsCards },
+    ];
+
+    sections.forEach((section) => {
+      if (section.element && section.swiper) {
+        const rect = section.element.getBoundingClientRect();
+        const threshold = window.innerHeight * 0.2;
+
+        if (rect.top <= threshold && rect.bottom >= threshold) {
+          handleScroll(event, section.swiper);
+        }
       }
     });
   }
-  function showPopup(popup) {
-    popup.style.display = "flex";
-    setTimeout(() => {
-      popup.style.transition = "opacity 0.4s";
-      popup.style.opacity = "1";
-    }, 10);
-  } 
 
-  // popup
-  let popup = document.querySelector('.popup')
-  let popupBtns = document.querySelectorAll(".popup-btn");
-  if(popup && popupBtns){
-    hidePopup(popup);
-    popupBtns.forEach( btn => {
-      btn.addEventListener('click', () => {
-        showPopup(popup);
-      })
-    })
-  }
+  // Разрешение стандартного скролла
+  function enableScroll(event) {
+    const sections = [
+      { element: document.querySelector(".clients"), swiper: clientsCards },
+      { element: document.querySelector(".services"), swiper: servicesCards },
+      { element: document.querySelector(".portfolio"), swiper: portfolioCards },
+      { element: document.querySelector(".benefits"), swiper: benefitsCards },
+    ];
 
-  // file
+    let inSwiperZone = false;
 
-  let file = document.querySelector('.file');
-  if(file){
-    file.addEventListener('change', ()=> {
-      if(file.files[0]?.name) {
-        document.querySelector('.file-done').style.display = 'block';
-        document.querySelector('.file-done').innerHTML = file.files[0].name;
-        document.querySelector('.file-empty').style.display = 'none';
-      }
-      else {
-        document.querySelector('.file-done').style.display = 'none';
-        document.querySelector('.file-empty').style.display = 'block';
+    sections.forEach((section) => {
+      if (section.element) {
+        const rect = section.element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          inSwiperZone = true;
+        }
       }
     });
+
+    if (inSwiperZone) {
+      window.removeEventListener("wheel", enableScroll, { passive: false });
+      window.addEventListener("wheel", stopScroll, { passive: false });
+    }
   }
+
+  // Обработчики событий
+  window.addEventListener("wheel", stopScroll, { passive: false });
 
   window.addEventListener("resize", () => {
     initSwiper();
@@ -309,10 +317,10 @@ window.addEventListener("load", function () {
     if (window.innerWidth <= 980) {
       header.classList.remove('hidden');
     }
-  });
+  }, { passive: true });
 
   window.addEventListener('scroll', () => {
-    handleScroll()
+    headerScroll()
     let sectionAnim = document.querySelectorAll('.section-anim');
     sectionAnim.forEach( section => {
       let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
@@ -320,5 +328,5 @@ window.addEventListener("load", function () {
         section.classList.add('active');
       }
     })
-  });
+  }, { passive: true });
 });
