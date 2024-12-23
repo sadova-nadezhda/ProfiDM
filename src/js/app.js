@@ -184,6 +184,13 @@ window.addEventListener("load", function () {
     });
   }
 
+  // AOS
+  AOS.init({
+    duration: 1200,
+    offset: 0,
+  });
+  
+
   // Swiper
 
   var portfolioSwiper = new Swiper(".portfolioSwiper", {
@@ -295,15 +302,14 @@ window.addEventListener("load", function () {
     }
   });
 
-  const portfolio = document.querySelector('.portfolio');
-  const portfolioCardsBox = document.querySelector('.portfolio__cards');
+  const portfolio = document.querySelector('.portfolio-height');
+  const portfolioCardsBox = portfolio?.querySelector('.portfolio__cards');
   
   if (portfolio && portfolioCardsBox) {
     portfolio.style.height = `${portfolioCardsBox.offsetHeight + 340}px`;
   }
 
   // Управление прокруткой и слайдером
-
   function handleScroll(event, swiper) {
     if (!swiper) return; // Если слайдер не определен, выходим из функции
 
@@ -325,47 +331,47 @@ window.addEventListener("load", function () {
 
   // Функция для управления прокруткой и слайдами
   function stopScroll(event) {
-    const sections = [
-      { element: document.querySelector(".clients-home"), swiper: clientsCards },
-      { element: document.querySelector(".services-home"), swiper: servicesCards },
-      { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
-    ];
+  const sections = [
+    { element: document.querySelector(".clients-home"), swiper: clientsCards },
+    { element: document.querySelector(".services-home"), swiper: servicesCards },
+    { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
+  ];
 
-    sections.forEach((section) => {
-      if (section.element && section.swiper) {
-        const rect = section.element.getBoundingClientRect();
-        const threshold = window.innerHeight * 0.2;
+  sections.forEach((section) => {
+    if (section.element && section.swiper) {
+      const rect = section.element.getBoundingClientRect();
+      const threshold = window.innerHeight * 0.2;
 
-        if (rect.top <= threshold && rect.bottom >= threshold) {
-          handleScroll(event, section.swiper);
-        }
+      if (rect.top <= threshold && rect.bottom >= threshold) {
+        handleScroll(event, section.swiper);
       }
-    });
+    }
+  });
   }
 
   // Разрешение стандартного скролла
   function enableScroll(event) {
-    const sections = [
-      { element: document.querySelector(".clients-home"), swiper: clientsCards },
-      { element: document.querySelector(".services-home"), swiper: servicesCards },
-      { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
-    ];
+  const sections = [
+    { element: document.querySelector(".clients-home"), swiper: clientsCards },
+    { element: document.querySelector(".services-home"), swiper: servicesCards },
+    { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
+  ];
 
-    let inSwiperZone = false;
+  let inSwiperZone = false;
 
-    sections.forEach((section) => {
-      if (section.element) {
-        const rect = section.element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          inSwiperZone = true;
-        }
+  sections.forEach((section) => {
+    if (section.element) {
+      const rect = section.element.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        inSwiperZone = true;
       }
-    });
-
-    if (inSwiperZone) {
-      window.removeEventListener("wheel", enableScroll, { passive: false });
-      window.addEventListener("wheel", stopScroll, { passive: false });
     }
+  });
+
+  if (inSwiperZone) {
+    window.removeEventListener("wheel", enableScroll, { passive: false });
+    window.addEventListener("wheel", stopScroll, { passive: false });
+  }
   }
 
   // Обработчик touch для тачпада
@@ -373,21 +379,22 @@ window.addEventListener("load", function () {
   let touchStartY = 0;
 
   function handleTouchStart(event) {
-    const touch = event.touches[0];
-    touchStartX = touch.clientX;
-    touchStartY = touch.clientY;
+  const touch = event.touches[0];
+  touchStartX = touch.clientX;
+  touchStartY = touch.clientY;
   }
 
   function handleTouchMove(event) {
-    if (!touchStartX || !touchStartY) return;
+  if (!touchStartX || !touchStartY) return;
 
-    const touch = event.touches[0];
-    const diffX = touch.clientX - touchStartX;
-    const diffY = touch.clientY - touchStartY;
+  const touch = event.touches[0];
+  const diffX = touch.clientX - touchStartX;
+  const diffY = touch.clientY - touchStartY;
 
-    // Если движение по вертикали больше, чем по горизонтали, обрабатываем как прокрутку
-    if (Math.abs(diffY) > Math.abs(diffX)) {
-      event.preventDefault(); // Останавливаем стандартный скролл страницы
+  // Если движение по вертикали больше, чем по горизонтали, обрабатываем как прокрутку
+  if (Math.abs(diffY) > Math.abs(diffX)) {
+    event.preventDefault(); // Останавливаем стандартный скролл страницы
+    if (Math.abs(diffY) > 30) { // Ограничиваем минимальное движение для свайпа
       if (diffY > 0) {
         // Прокрутка вниз
         handleScroll(event, this);
@@ -397,14 +404,12 @@ window.addEventListener("load", function () {
       }
     }
   }
-
-  function handleTouchEnd() {
-    touchStartX = 0;
-    touchStartY = 0;
   }
 
-  // AOS
-  AOS.init();
+  function handleTouchEnd() {
+  touchStartX = 0;
+  touchStartY = 0;
+  }
 
   // Добавляем обработчики touch
   window.addEventListener("touchstart", handleTouchStart, { passive: true });

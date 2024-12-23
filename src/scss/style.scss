@@ -511,6 +511,7 @@
 // main
 
 .main {
+  overflow: hidden;
   &-portfolio {
     &-inner {
       .breadcrumbs {
@@ -542,6 +543,7 @@
   }
 }
 
+
 // sections
 
 .hero {
@@ -564,6 +566,7 @@
   &__desc {
     max-width: 487px;
     font-family: Ruberoid;
+    overflow: hidden;
   }
 
   &__bottom {
@@ -575,7 +578,10 @@
   }
 
   &__title {
+    display: flex;
+    flex-direction: column;
     max-width: 780px;
+    overflow: hidden;
   }
 
   &__button {

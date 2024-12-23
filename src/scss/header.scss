@@ -239,6 +239,7 @@
     }
   }
   &.hidden {
-    transform: translateY(-70%);
+    transition: transform .5s ease !important;
+    transform: translateY(-70%) !important;
   }
 }

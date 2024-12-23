@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px solid #4F3333;
+  position: relative;
   &__container {
     display: flex;
     flex-direction: column;
@@ -110,5 +110,29 @@
         color: var(--main, $main);
       }
     }
+  }
+  .button-up {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px; 
+    height: 44px; 
+    background-color: var(--main, $main); 
+    border: none;
+    border-radius: 100%; 
+    transition: top 0.3s ease-out;
+    cursor: pointer;
+    &:hover {
+      top: -10px;
+    }
+  }
+  .line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: -1;
   }
 }
