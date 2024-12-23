@@ -64,6 +64,10 @@ body {
 //   overflow: hidden;
 // }
 
+section {
+  scroll-snap-align: start;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;

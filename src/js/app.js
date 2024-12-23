@@ -249,18 +249,18 @@ window.addEventListener("load", function () {
     },
   });
 
-  var portfolioCards = new Swiper(".portfolioCards", {
-    direction: "vertical",
-    slidesPerView: 2,
-    spaceBetween: 80,
-    speed: 1500,
-    breakpoints: {
-      768: {
-        slidesPerView: 1.05,
-        spaceBetween: 50,
-      },
-    }
-  });
+  // var portfolioCards = new Swiper(".portfolioCards", {
+  //   direction: "vertical",
+  //   slidesPerView: 2,
+  //   spaceBetween: 80,
+  //   speed: 1500,
+  //   breakpoints: {
+  //     768: {
+  //       slidesPerView: 1.05,
+  //       spaceBetween: 50,
+  //     },
+  //   }
+  // });
 
   var clientsCards = new Swiper(".clientsCards", {
     slidesPerView: 2,
