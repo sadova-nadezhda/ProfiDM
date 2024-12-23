@@ -193,11 +193,9 @@ window.addEventListener("load", function () {
   // Map Home
 
   document.querySelectorAll('.hero__map circle').forEach(circle => {
-    // Генерация случайной длительности анимации и задержки
-    const randomDuration = (Math.random() * 2 + 1).toFixed(2) + 's'; // от 1 до 3 секунд
-    const randomDelay = (Math.random() * 2).toFixed(2) + 's'; // от 0 до 2 секунд
+    const randomDuration = (Math.random() * 2 + 1).toFixed(2) + 's';
+    const randomDelay = (Math.random() * 2).toFixed(2) + 's';
   
-    // Применение случайных значений к анимации
     circle.style.animationDuration = randomDuration;
     circle.style.animationDelay = randomDelay;
   });
@@ -352,7 +350,7 @@ window.addEventListener("load", function () {
   sections.forEach((section) => {
     if (section.element && section.swiper) {
       const rect = section.element.getBoundingClientRect();
-      const threshold = window.innerHeight * 0.2;
+      const threshold = window.innerHeight * 0.5;
 
       if (rect.top <= threshold && rect.bottom >= threshold) {
         handleScroll(event, section.swiper);
