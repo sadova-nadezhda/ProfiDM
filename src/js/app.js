@@ -189,6 +189,18 @@ window.addEventListener("load", function () {
     duration: 1200,
     offset: 0,
   });
+
+  // Map Home
+
+  document.querySelectorAll('.hero__map circle').forEach(circle => {
+    // Генерация случайной длительности анимации и задержки
+    const randomDuration = (Math.random() * 2 + 1).toFixed(2) + 's'; // от 1 до 3 секунд
+    const randomDelay = (Math.random() * 2).toFixed(2) + 's'; // от 0 до 2 секунд
+  
+    // Применение случайных значений к анимации
+    circle.style.animationDuration = randomDuration;
+    circle.style.animationDelay = randomDelay;
+  });
   
 
   // Swiper
