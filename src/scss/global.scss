@@ -55,6 +55,7 @@ body {
   justify-content: space-between;
   min-height: 100vh;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   text-rendering: optimizeSpeed;
   background-color: var(--dark, $dark);
 }
