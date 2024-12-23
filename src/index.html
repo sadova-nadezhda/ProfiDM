@@ -6,7 +6,7 @@
   @@include('html/header.html')
 
   <main>
-    <section class="hero section-top">
+    <section class="hero section-top section-hidden">
       <div class="container">
         <div class="hero__container">
           <div class="hero__desc">
@@ -29,7 +29,7 @@
         </div>
       </div>
     </section>
-    <section class="clients section-pad-top">
+    <section class="clients clients-home section-pad-top section-hidden">
       <div class="container">
         <div class="clients__container">
           <div class="clients__top heading">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </section>
-    <section class="services section-pad">
+    <section class="services services-home section-pad section-hidden">
       <div class="container">
         <div class="services__container">
           <div class="services__heading heading">
@@ -87,7 +87,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio section-hidden section-pad">
+    <!-- <section class="portfolio portfolio-home section-hidden section-pad">
       <div class="container">
         <div class="portfolio__container">
           <div class="portfolio__top heading">
@@ -127,15 +127,46 @@
           </div>
         </div>
       </div>
+    </section> -->
+    <section class="portfolio">
+      <div class="portfolio__wrap section-pad">
+        <div class="container">
+          <div class="portfolio__container">
+            <div class="portfolio__top heading">
+              <h2 class="portfolio__title title text-down">портфолио</h2>
+              <a href="portfolio.html" class="portfolio__button button button-line">подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio__marquee text-up">
+          <div class="items marquee">
+            <div class="item">Портфолио</div>
+            <div class="item">Портфолио</div>
+            <div class="item">Портфолио</div>
+          </div>
+          <div aria-hidden="true" class="items marquee">
+            <div class="item">Портфолио</div>
+            <div class="item">Портфолио</div>
+            <div class="item">Портфолио</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio__cards">
+        @@include('html/portfolioCard.html')
+        @@include('html/portfolioCard.html')
+        @@include('html/portfolioCard.html')
+        @@include('html/portfolioCard.html')
+        @@include('html/portfolioCard.html')
+      </div>
     </section>
-    <section class="feedback section-pad section-anim">
+    <section class="feedback section-pad section-anim section-hidden">
       <div class="container">
         <div class="feedback__container">
           @@include('html/feedback.html')
         </div>
       </div>
     </section>
-    <section class="benefits section-pad">
+    <section class="benefits benefits-home section-pad section-hidden">
       <div class="container">
         <div class="benefits__container">
           <div class="benefits__top heading">

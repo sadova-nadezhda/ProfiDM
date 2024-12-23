@@ -130,6 +130,60 @@ window.addEventListener("load", function () {
     }, { passive: true });
   }
 
+  // Popup hide/show
+
+  function hidePopup(popup) {
+    popup.addEventListener('click', function(e) {
+      const target = e.target;
+      if (
+        target.classList.contains("popup__close") ||
+        target.classList.contains("popup")
+      ) {
+        popup.style.transition = "opacity 0.4s";
+        popup.style.opacity = "0";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 400);
+      }
+    });
+  }
+  function showPopup(popup) {
+    popup.style.display = "flex";
+    setTimeout(() => {
+      popup.style.transition = "opacity 0.4s";
+      popup.style.opacity = "1";
+    }, 10);
+  } 
+
+  // popup
+  let popup = document.querySelector('.popup')
+  let popupBtns = document.querySelectorAll(".popup-btn");
+  if(popup && popupBtns){
+    hidePopup(popup);
+    popupBtns.forEach( btn => {
+      btn.addEventListener('click', () => {
+        showPopup(popup);
+      })
+    })
+  }
+
+  // file
+
+  let file = document.querySelector('.file');
+  if(file){
+    file.addEventListener('change', ()=> {
+      if(file.files[0]?.name) {
+        document.querySelector('.file-done').style.display = 'block';
+        document.querySelector('.file-done').innerHTML = file.files[0].name;
+        document.querySelector('.file-empty').style.display = 'none';
+      }
+      else {
+        document.querySelector('.file-done').style.display = 'none';
+        document.querySelector('.file-empty').style.display = 'block';
+      }
+    });
+  }
+
   // Swiper
 
   var portfolioSwiper = new Swiper(".portfolioSwiper", {
@@ -241,7 +295,15 @@ window.addEventListener("load", function () {
     }
   });
 
+  const portfolio = document.querySelector('.portfolio');
+  const portfolioCardsBox = document.querySelector('.portfolio__cards');
+  
+  if (portfolio && portfolioCardsBox) {
+    portfolio.style.height = `${portfolioCardsBox.offsetHeight + 340}px`;
+  }
+
   // Управление прокруткой и слайдером
+
   function handleScroll(event, swiper) {
     if (!swiper) return; // Если слайдер не определен, выходим из функции
 
@@ -264,10 +326,9 @@ window.addEventListener("load", function () {
   // Функция для управления прокруткой и слайдами
   function stopScroll(event) {
     const sections = [
-      { element: document.querySelector(".clients"), swiper: clientsCards },
-      { element: document.querySelector(".services"), swiper: servicesCards },
-      { element: document.querySelector(".portfolio"), swiper: portfolioCards },
-      { element: document.querySelector(".benefits"), swiper: benefitsCards },
+      { element: document.querySelector(".clients-home"), swiper: clientsCards },
+      { element: document.querySelector(".services-home"), swiper: servicesCards },
+      { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
     ];
 
     sections.forEach((section) => {
@@ -285,10 +346,9 @@ window.addEventListener("load", function () {
   // Разрешение стандартного скролла
   function enableScroll(event) {
     const sections = [
-      { element: document.querySelector(".clients"), swiper: clientsCards },
-      { element: document.querySelector(".services"), swiper: servicesCards },
-      { element: document.querySelector(".portfolio"), swiper: portfolioCards },
-      { element: document.querySelector(".benefits"), swiper: benefitsCards },
+      { element: document.querySelector(".clients-home"), swiper: clientsCards },
+      { element: document.querySelector(".services-home"), swiper: servicesCards },
+      { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
     ];
 
     let inSwiperZone = false;
@@ -307,6 +367,49 @@ window.addEventListener("load", function () {
       window.addEventListener("wheel", stopScroll, { passive: false });
     }
   }
+
+  // Обработчик touch для тачпада
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  function handleTouchStart(event) {
+    const touch = event.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+  }
+
+  function handleTouchMove(event) {
+    if (!touchStartX || !touchStartY) return;
+
+    const touch = event.touches[0];
+    const diffX = touch.clientX - touchStartX;
+    const diffY = touch.clientY - touchStartY;
+
+    // Если движение по вертикали больше, чем по горизонтали, обрабатываем как прокрутку
+    if (Math.abs(diffY) > Math.abs(diffX)) {
+      event.preventDefault(); // Останавливаем стандартный скролл страницы
+      if (diffY > 0) {
+        // Прокрутка вниз
+        handleScroll(event, this);
+      } else {
+        // Прокрутка вверх
+        handleScroll(event, this);
+      }
+    }
+  }
+
+  function handleTouchEnd() {
+    touchStartX = 0;
+    touchStartY = 0;
+  }
+
+  // AOS
+  AOS.init();
+
+  // Добавляем обработчики touch
+  window.addEventListener("touchstart", handleTouchStart, { passive: true });
+  window.addEventListener("touchmove", handleTouchMove, { passive: false });
+  window.addEventListener("touchend", handleTouchEnd, { passive: true });
 
   // Обработчики событий
   window.addEventListener("wheel", stopScroll, { passive: false });
