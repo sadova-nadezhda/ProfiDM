@@ -197,47 +197,61 @@ window.addEventListener("load", function () {
   });
 
   // portfolio
-  const portfolio = document.querySelector('.portfolio-height');
-  const portfolioCardsBox = portfolio?.querySelector('.portfolio__cards');
-  if (portfolio && portfolioCardsBox) {
-    if (window.innerWidth > 767) {
-      portfolio.style.height = `${portfolioCardsBox.offsetHeight + 340}px`;
-    } else {
-      portfolio.style.height = `${portfolioCardsBox.offsetHeight + 200}px`;
+  function updatePortfolioHeight() {
+    const portfolio = document.querySelector('.portfolio-height');
+    const portfolioCardsBox = portfolio?.querySelector('.portfolio__cards');
+  
+    if (portfolio && portfolioCardsBox) {
+      if (window.innerWidth > 767) {
+        portfolio.style.height = `${portfolioCardsBox.offsetHeight + 340}px`;
+      } else {
+        portfolio.style.height = `${portfolioCardsBox.offsetHeight + 200}px`;
+      }
     }
-    
   }
+  
+  updatePortfolioHeight();
 
   // GSAP
   gsap.registerPlugin(ScrollTrigger);
 
-  let horizontals = document.querySelectorAll('.horizontal');
-  let slidersMob = document.querySelectorAll('.js-slider');
-
-  if (window.innerWidth > 767) {
-    horizontals.forEach(horizontal => {
-      let parentElement = horizontal.parentElement;
-      
-      gsap.to(horizontal, {
-        x: () => horizontal.scrollWidth * -1,
-        xPercent: 100,
-        scrollTrigger: {
-          trigger: horizontal,
-          start: 'center center',
-          end: '+=2000px',
-          pin: horizontal,
-          scrub: true,
-          invalidateOnRefresh: true,
-          // onEnter: () => {
-          //   parentElement.classList.add('active');
-          // },
-          // onLeave: () => {
-          //   parentElement.classList.remove('active');
-          // }
-        }
+  function initializeHorizontalScroll() {
+    let horizontals = document.querySelectorAll('.horizontal');
+    
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  
+    if (window.innerWidth > 767) {
+      horizontals.forEach(horizontal => {
+        let parentElement = horizontal.parentElement;
+        
+        gsap.to(horizontal, {
+          x: () => horizontal.scrollWidth * -1,
+          xPercent: 100,
+          scrollTrigger: {
+            trigger: horizontal,
+            start: 'center center',
+            end: '+=2000px',
+            pin: horizontal,
+            scrub: true,
+            invalidateOnRefresh: true,
+            // onEnter: () => {
+            //   parentElement.classList.add('active');
+            // },
+            // onLeave: () => {
+            //   parentElement.classList.remove('active');
+            // }
+          }
+        });
       });
-    });
+    } else {
+      horizontals.forEach(horizontal => {
+        gsap.killTweensOf(horizontal); 
+        gsap.set(horizontal, { clearProps: "all" }); 
+      });
+    }
   }
+
+  initializeHorizontalScroll();
 
   // Swiper
 
@@ -396,7 +410,7 @@ window.addEventListener("load", function () {
   };
 
   // Основная функция для инициализации всех слайдеров
-  const initSwipers = () => {
+  const initMobSwipers = () => {
     const sliderContainers = document.querySelectorAll('.js-slider');
 
     sliderContainers.forEach((sliderContainer) => {
@@ -408,7 +422,7 @@ window.addEventListener("load", function () {
     });
   };
 
-  initSwipers();
+  initMobSwipers();
 
   // mask phone
   $.fn.setCursorPosition = function (pos) {
@@ -431,11 +445,14 @@ window.addEventListener("load", function () {
 
   window.addEventListener("resize", () => {
     initSwiper();
+    initMobSwipers();
+    initializeHorizontalScroll();
+    updatePortfolioHeight();
     sectionTop.forEach(addPadTop);
     if (window.innerWidth <= 980) {
       header.classList.remove('hidden');
     }
-  }, { passive: true });
+  });
 
   window.addEventListener('scroll', () => {
     headerScroll()
@@ -446,5 +463,5 @@ window.addEventListener("load", function () {
         section.classList.add('active');
       }
     })
-  }, { passive: true });
+  });
 });
