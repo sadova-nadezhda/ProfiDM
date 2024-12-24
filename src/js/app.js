@@ -212,6 +212,7 @@ window.addEventListener("load", function () {
   gsap.registerPlugin(ScrollTrigger);
 
   let horizontals = document.querySelectorAll('.horizontal');
+  let slidersMob = document.querySelectorAll('.js-slider');
 
   if (window.innerWidth > 767) {
     horizontals.forEach(horizontal => {
@@ -299,7 +300,7 @@ window.addEventListener("load", function () {
   });
 
   var benefitsCards = new Swiper(".benefitsCards", {
-    slidesPerView: 1,
+    slidesPerView: 1.2,
     spaceBetween: 8,
     speed: 500,
     loop: true,
@@ -361,6 +362,54 @@ window.addEventListener("load", function () {
   }
   initSwiper();
 
+  // Функция для подготовки разметки каждого слайдера
+  const prepareSwiperMarkup = (sliderContainer) => {
+    if (!sliderContainer.querySelector('.swiper-wrapper')) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('swiper-wrapper');
+
+      const cards = Array.from(sliderContainer.children);
+      cards.forEach((card) => {
+        card.classList.add('swiper-slide'); 
+        wrapper.appendChild(card);
+      });
+
+      sliderContainer.appendChild(wrapper);
+    }
+  };
+
+  // Функция для инициализации слайдера с учетом его дополнительных классов
+  const initializeSwiper = (sliderContainer) => {
+    const isClientsCards = sliderContainer.classList.contains('clients__cards');
+    const slidesPerView = isClientsCards ? 2 : 1.2; 
+
+    new Swiper(sliderContainer, {
+      slidesPerView: slidesPerView,
+      spaceBetween: 8, 
+      speed: 500,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  };
+
+  // Основная функция для инициализации всех слайдеров
+  const initSwipers = () => {
+    const sliderContainers = document.querySelectorAll('.js-slider');
+
+    sliderContainers.forEach((sliderContainer) => {
+      prepareSwiperMarkup(sliderContainer);
+
+      if (window.innerWidth <= 768) {
+        initializeSwiper(sliderContainer);
+      }
+    });
+  };
+
+  initSwipers();
+
   // mask phone
   $.fn.setCursorPosition = function (pos) {
     if ($(this).get(0).setSelectionRange) {
@@ -399,25 +448,3 @@ window.addEventListener("load", function () {
     })
   }, { passive: true });
 });
-
-
-let flag = true;
-
-$(window).on('resize', function(){
-  if ($(this).width() <= 767 && flag) {
-    flag = false;
-    $('.js-slick-slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
-      arrows: false,
-      variableWidth: true,
-      dots: false
-    });
-  }
-  else if ($(this).width() > 767 && !flag) {
-    flag = true;
-    $('.js-slick-slider').slick('unslick');
-  }
-}).resize();
