@@ -343,7 +343,6 @@
       .target {
         min-width: 100%;
         height: 100%;
-        overflow: auto;
         opacity: 0;
   
         &.active {
@@ -637,7 +636,7 @@
 
     @media(max-width: 980px) {
       position: static;
-      height: 359px;
+      height: 320px;
     }
   }
 }
@@ -2046,12 +2045,15 @@ input.file {
     position: relative;
     border-bottom: 1px solid #fff;
     select {
+      appearance: none;
+      -webkit-appearance: none;
       min-width: 280px;
       padding: 0;
       padding-left: 36px;
       padding-bottom: 12px;
       border-bottom: 0;
       border-radius: 0;
+      background: url(../img/arrow-down.svg) 100% 50% / contain no-repeat;
       &:focus {
         outline: none;
       }
