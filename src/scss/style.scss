@@ -220,6 +220,10 @@
   }
 }
 
+.slick-list {
+  overflow: visible;
+}
+
 // widjet
 
 .widjet__box {
@@ -960,6 +964,7 @@
     }
     .services__top {
       margin-bottom: 32px;
+      opacity: 1;
     }
     .services__icon {
       height: 160px;
@@ -1215,23 +1220,33 @@
   }
 
   &-other {
-    &__card {
-      max-height: 498px;
-      height: 34vw;
-      min-height: 200px;
-    }
     .services__cards {
       display: block;
     }
     .services__card {
       gap: 12px;
-      height: auto;
+      max-height: 498px;
+      height: 34vw;
+      min-height: 200px;
+      @media(max-width: 767px) {
+        gap: 12px;
+        height: auto;
+      }
+    }
+    .services__top {
+      opacity: 1;
     }
     .services__caption {
-      font-size: 12px;
+      @media(max-width: 767px) {
+        font-size: 12px;
+      }
     }
   }
-
+  &-benefits {
+    .benefits__desc {
+      opacity: 1;
+    }
+  }
 }
 
 .portfolio {
@@ -1874,7 +1889,9 @@
     }
 
     @media(max-width: 767px) {
+      height: 257px;
       padding: 16px;
+      margin-right: 8px;
     }
   }
 

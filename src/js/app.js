@@ -227,12 +227,12 @@ window.addEventListener("load", function () {
           pin: horizontal,
           scrub: true,
           invalidateOnRefresh: true,
-          onEnter: () => {
-            parentElement.classList.add('active');
-          },
-          onLeave: () => {
-            parentElement.classList.remove('active');
-          }
+          // onEnter: () => {
+          //   parentElement.classList.add('active');
+          // },
+          // onLeave: () => {
+          //   parentElement.classList.remove('active');
+          // }
         }
       });
     });
@@ -245,6 +245,10 @@ window.addEventListener("load", function () {
     spaceBetween: 0,
     centeredSlides: true,
     loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".portfolio-gallery__prev",
       prevEl: ".portfolio-gallery__next",
@@ -262,6 +266,10 @@ window.addEventListener("load", function () {
     initialSlide: 1,
     loop: true,
     reverseDirection: true,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: ".services-inner__pagination",
       type: "fraction",
@@ -276,6 +284,10 @@ window.addEventListener("load", function () {
     direction: 'horizontal',
     loop: true,
     reverseDirection: true,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: ".services-inner__pagination",
       type: "fraction",
@@ -289,7 +301,23 @@ window.addEventListener("load", function () {
   var benefitsCards = new Swiper(".benefitsCards", {
     slidesPerView: 1,
     spaceBetween: 8,
-    speed: 1500,
+    speed: 500,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    on: {
+      init() {
+        this.el.addEventListener('mouseenter', () => {
+          this.autoplay.stop();
+        });
+
+        this.el.addEventListener('mouseleave', () => {
+          this.autoplay.start();
+        });
+      }
+    },
     breakpoints: {
       768: {
         slidesPerView: 'auto',
@@ -305,7 +333,23 @@ window.addEventListener("load", function () {
         servicesCards = new Swiper(".servicesCards", {
           slidesPerView: 'auto',
           spaceBetween: 0,
-          speed: 1500,
+          speed: 500,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          on: {
+            init() {
+              this.el.addEventListener('mouseenter', () => {
+                this.autoplay.stop();
+              });
+
+              this.el.addEventListener('mouseleave', () => {
+                this.autoplay.start();
+              });
+            }
+          },
         });
       }
     } else {
@@ -316,6 +360,24 @@ window.addEventListener("load", function () {
     }
   }
   initSwiper();
+
+  // mask phone
+  $.fn.setCursorPosition = function (pos) {
+    if ($(this).get(0).setSelectionRange) {
+      $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+      var range = $(this).get(0).createTextRange();
+      range.collapse(true);
+      range.moveEnd("character", pos);
+      range.moveStart("character", pos);
+      range.select();
+    }
+  };
+  $('input[type="tel"]')
+    .click(function () {
+      $(this).setCursorPosition(3);
+    })
+    .mask("+7 (999) 999 99 99");
 
 
   window.addEventListener("resize", () => {
