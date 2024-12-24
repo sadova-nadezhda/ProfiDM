@@ -119,7 +119,6 @@ window.addEventListener("load", function () {
     });
   });
 
-
   // Превью видео
   const video = document.querySelector(".portfolio-video__box");
   if(video) {
@@ -131,7 +130,6 @@ window.addEventListener("load", function () {
   }
 
   // Popup hide/show
-
   function hidePopup(popup) {
     popup.addEventListener('click', function(e) {
       const target = e.target;
@@ -168,7 +166,6 @@ window.addEventListener("load", function () {
   }
 
   // file
-
   let file = document.querySelector('.file');
   if(file){
     file.addEventListener('change', ()=> {
@@ -191,7 +188,6 @@ window.addEventListener("load", function () {
   });
 
   // Map Home
-
   document.querySelectorAll('.hero__map circle').forEach(circle => {
     const randomDuration = (Math.random() * 2 + 1).toFixed(2) + 's';
     const randomDelay = (Math.random() * 2).toFixed(2) + 's';
@@ -199,7 +195,6 @@ window.addEventListener("load", function () {
     circle.style.animationDuration = randomDuration;
     circle.style.animationDelay = randomDelay;
   });
-  
 
   // Swiper
 
@@ -249,40 +244,26 @@ window.addEventListener("load", function () {
     },
   });
 
-  // var portfolioCards = new Swiper(".portfolioCards", {
-  //   direction: "vertical",
-  //   slidesPerView: 2,
-  //   spaceBetween: 80,
-  //   speed: 1500,
-  //   breakpoints: {
-  //     768: {
-  //       slidesPerView: 1.05,
-  //       spaceBetween: 50,
-  //     },
-  //   }
-  // });
-
   var clientsCards = new Swiper(".clientsCards", {
     slidesPerView: 2,
     spaceBetween: 0,
-    speed: 1000,
+    speed: 1500,
     breakpoints: {
       768: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 0,
       },
     }
   });
 
   let servicesCards;
-
   function initSwiper() {
     if (window.innerWidth > 768) {
       if (!servicesCards) {
         servicesCards = new Swiper(".servicesCards", {
-          slidesPerView: 3,
+          slidesPerView: 'auto',
           spaceBetween: 0,
-          speed: 1000,
+          speed: 1500,
         });
       }
     } else {
@@ -292,21 +273,15 @@ window.addEventListener("load", function () {
       }
     }
   }
-
   initSwiper();
-
 
   var benefitsCards = new Swiper(".benefitsCards", {
     slidesPerView: 1,
     spaceBetween: 8,
-    speed: 1000,
+    speed: 1500,
     breakpoints: {
       768: {
-        slidesPerView: 2,
-        spaceBetween: 0,
-      },
-      981: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 0,
       },
     }
@@ -316,11 +291,17 @@ window.addEventListener("load", function () {
   const portfolioCardsBox = portfolio?.querySelector('.portfolio__cards');
   
   if (portfolio && portfolioCardsBox) {
-    portfolio.style.height = `${portfolioCardsBox.offsetHeight + 340}px`;
+    if (window.innerWidth > 767) {
+      portfolio.style.height = `${portfolioCardsBox.offsetHeight + 340}px`;
+    } else {
+      portfolio.style.height = `${portfolioCardsBox.offsetHeight + 200}px`;
+    }
+    
   }
 
   // Управление прокруткой и слайдером
   function handleScroll(event, swiper) {
+
     if (!swiper) return; // Если слайдер не определен, выходим из функции
 
     if (swiper.isEnd && event.deltaY > 0) {
@@ -340,23 +321,24 @@ window.addEventListener("load", function () {
   }
 
   // Функция для управления прокруткой и слайдами
+
   function stopScroll(event) {
-  const sections = [
-    { element: document.querySelector(".clients-home"), swiper: clientsCards },
-    { element: document.querySelector(".services-home"), swiper: servicesCards },
-    { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
-  ];
+    const sections = [
+      { element: document.querySelector(".clients-home"), swiper: clientsCards },
+      { element: document.querySelector(".services-home"), swiper: servicesCards },
+      { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
+    ];
 
-  sections.forEach((section) => {
-    if (section.element && section.swiper) {
-      const rect = section.element.getBoundingClientRect();
-      const threshold = window.innerHeight * 0.5;
+    sections.forEach((section) => {
+      if (section.element && section.swiper) {
+        const rect = section.element.getBoundingClientRect();
+        const threshold = window.innerHeight * 0.3;
 
-      if (rect.top <= threshold && rect.bottom >= threshold) {
-        handleScroll(event, section.swiper);
+        if (rect.top <= threshold && rect.bottom >= threshold) {
+          handleScroll(event, section.swiper);
+        }
       }
-    }
-  });
+    });
   }
 
   // Разрешение стандартного скролла
@@ -389,36 +371,34 @@ window.addEventListener("load", function () {
   let touchStartY = 0;
 
   function handleTouchStart(event) {
-  const touch = event.touches[0];
-  touchStartX = touch.clientX;
-  touchStartY = touch.clientY;
+    const touch = event.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
   }
 
   function handleTouchMove(event) {
-  if (!touchStartX || !touchStartY) return;
+    if (!touchStartX || !touchStartY) return;
 
-  const touch = event.touches[0];
-  const diffX = touch.clientX - touchStartX;
-  const diffY = touch.clientY - touchStartY;
+    const touch = event.touches[0];
+    const diffX = touch.clientX - touchStartX;
+    const diffY = touch.clientY - touchStartY;
 
-  // Если движение по вертикали больше, чем по горизонтали, обрабатываем как прокрутку
-  if (Math.abs(diffY) > Math.abs(diffX)) {
-    event.preventDefault(); // Останавливаем стандартный скролл страницы
-    if (Math.abs(diffY) > 30) { // Ограничиваем минимальное движение для свайпа
-      if (diffY > 0) {
-        // Прокрутка вниз
-        handleScroll(event, this);
-      } else {
-        // Прокрутка вверх
-        handleScroll(event, this);
+    // Если движение по вертикали больше, чем по горизонтали, обрабатываем как прокрутку
+    if (Math.abs(diffY) > Math.abs(diffX)) {
+      event.preventDefault(); 
+      if (Math.abs(diffY) > 400) { 
+        if (diffY > 0) {
+          handleScroll(event, this);
+        } else {
+          handleScroll(event, this);
+        }
       }
     }
   }
-  }
 
   function handleTouchEnd() {
-  touchStartX = 0;
-  touchStartY = 0;
+    touchStartX = 0;
+    touchStartY = 0;
   }
 
   // Добавляем обработчики touch
@@ -442,7 +422,7 @@ window.addEventListener("load", function () {
     let sectionAnim = document.querySelectorAll('.section-anim');
     sectionAnim.forEach( section => {
       let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
-      if (window.scrollY > offsetTop - 200) {
+      if (window.scrollY > offsetTop - 400) {
         section.classList.add('active');
       }
     })
