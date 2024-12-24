@@ -1,185 +1,158 @@
-var header = document.querySelector("header");
+const header = document.querySelector("header");
+const sectionTop = document.querySelectorAll(".section-top");
 let lastScrollTop = 0;
-const sectionTop = document.querySelectorAll('.section-top');
 
-// Функции
-function addPadTop(section) {
-  section.style.marginTop = `${header.offsetHeight}px`;
-}
-
-function headerScroll() {
+const initHeaderScroll = () => {
+  const currentScroll = window.scrollY;
   if (window.innerWidth > 980) {
-    const currentScroll = window.scrollY;
-    if (currentScroll <= 0) {
-      header.classList.remove('hidden');
-    } else {
-      header.classList.add('hidden');
-    }
+    header.classList.toggle("hidden", currentScroll > 0);
     lastScrollTop = currentScroll;
   } else {
-    header.classList.remove('hidden');
+    header.classList.remove("hidden");
   }
-}
+};
 
-window.addEventListener("load", function () {
-  const link = document.querySelector(".header__burger");
-  const menu = document.querySelector(".header__nav");
+const addPadTop = (section) => {
+  section.style.marginTop = `${header.offsetHeight}px`;
+};
 
-  if (menu) {
-    link.addEventListener("click", () => {
-      link.classList.toggle("active");
-      menu.classList.toggle("open");
-    }, { passive: true });
+const toggleMenu = (link, menu) => {
+  link.classList.toggle("active");
+  menu.classList.toggle("open");
+};
 
-    window.addEventListener("scroll", () => {
-      if (menu.classList.contains("open")) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
-      }
+const closeMenu = (link, menu) => {
+  link.classList.remove("active");
+  menu.classList.remove("open");
+};
+
+const initTabs = (tabsContainer) => {
+  const STATE = { currentTab: null };
+  const targetsContainer = tabsContainer.querySelector(".targets");
+  const triggers = [...tabsContainer.querySelectorAll(".trigger")];
+  const select = tabsContainer.querySelector(".mobile-select");
+  const targets = triggers.map(trigger => document.querySelector(trigger.dataset.target));
+
+  const activateTab = (ind) => {
+    if (ind == null) return ind;
+    triggers[ind].classList.add("active");
+    targets[ind].classList.add("active");
+    targetsContainer.style.transform = `translateX(-${ind * 100}%)`;
+    return ind;
+  };
+
+  const deactivateTab = (ind) => {
+    if (ind == null) return ind;
+    triggers[ind].classList.remove("active");
+    targets[ind].classList.remove("active");
+    return null;
+  };
+
+  triggers.forEach((trigger, ind) => {
+    trigger.addEventListener("click", () => {
+      STATE.currentTab = deactivateTab(STATE.currentTab);
+      STATE.currentTab = activateTab(ind);
     });
-
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".header__nav, .header__burger")) {
-        link.classList.remove("active");
-        menu.classList.remove("open");
-      }
-    });
-  }
-
-  sectionTop.forEach(addPadTop);
-
-  // Табы портфолио
-  document.querySelectorAll(".tabs").forEach(tabsContainer => {
-    const STATE = { currentTab: null };
-    const targetsContainer = tabsContainer.querySelector(".targets");
-    const triggers = Array.from(tabsContainer.querySelectorAll(".trigger"));
-    const select = tabsContainer.querySelector(".mobile-select");
-    const targets = triggers.map(trigger => document.querySelector(trigger.dataset.target));
-
-    function activateTab(ind) {
-      if (ind == null) return ind;
-      triggers[ind].classList.add("active");
-      targets[ind].classList.add("active");
-      targetsContainer.style.transform = `translateX(-${ind * 100}%)`;
-      return ind;
-    }
-
-    function deactivateTab(ind) {
-      if (ind == null) return ind;
-      triggers[ind].classList.remove("active");
-      targets[ind].classList.remove("active");
-      return null;
-    }
-
-    if (targetsContainer) {
-      triggers.forEach((trigger, ind) => {
-        trigger.addEventListener("click", () => {
-          STATE.currentTab = deactivateTab(STATE.currentTab);
-          STATE.currentTab = activateTab(ind);
-        }, { passive: true });
-      });
-
-      const currentHash = window.location.hash;
-      const initialIndex = currentHash ? triggers.findIndex(trigger => trigger.getAttribute('href') === currentHash) : 0;
-      STATE.currentTab = activateTab(initialIndex !== -1 ? initialIndex : 0);
-
-      if (select) {
-        select.addEventListener("change", (event) => {
-          const selectedOption = select.options[select.selectedIndex];
-          const targetId = selectedOption.dataset.target;
-          const ind = targets.findIndex(target => target.id === targetId.slice(1));
-          if (ind !== -1) {
-            STATE.currentTab = deactivateTab(STATE.currentTab);
-            STATE.currentTab = activateTab(ind);
-          }
-        }, { passive: true });
-      }
-    }
   });
 
-  // Аккордеон
+  const initialIndex = triggers.findIndex(trigger => trigger.getAttribute("href") === window.location.hash) || 0;
+  STATE.currentTab = activateTab(initialIndex);
+
+  if (select) {
+    select.addEventListener("change", () => {
+      const ind = [...select.options].findIndex(opt => opt.dataset.target === `#${targets[0].id}`);
+      STATE.currentTab = deactivateTab(STATE.currentTab);
+      STATE.currentTab = activateTab(ind);
+    });
+  }
+};
+
+const initAccordion = () => {
   document.querySelectorAll(".accordion-header").forEach((button) => {
     button.addEventListener("click", () => {
-      const accordionContent = button.nextElementSibling;
-
-      button.classList.toggle("active");
-
-      if (button.classList.contains("active")) {
-        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-      } else {
-        accordionContent.style.maxHeight = 0;
-      }
+      const content = button.nextElementSibling;
+      const isActive = button.classList.toggle("active");
+      content.style.maxHeight = isActive ? `${content.scrollHeight}px` : "0";
 
       document.querySelectorAll(".accordion-header").forEach((otherButton) => {
         if (otherButton !== button) {
           otherButton.classList.remove("active");
-          otherButton.nextElementSibling.style.maxHeight = 0;
+          otherButton.nextElementSibling.style.maxHeight = "0";
         }
       });
     });
   });
+};
 
-  // Превью видео
+const initVideoPreview = () => {
   const video = document.querySelector(".portfolio-video__box");
-  if(video) {
-    video.addEventListener("click", function(event) {
-      const YTid = this.dataset.id;
-      this.classList.add("player");
-      this.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${YTid}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    }, { passive: true });
-  }
+  if (!video) return;
 
-  // Popup hide/show
-  function hidePopup(popup) {
-    popup.addEventListener('click', function(e) {
-      const target = e.target;
-      if (
-        target.classList.contains("popup__close") ||
-        target.classList.contains("popup")
-      ) {
-        popup.style.transition = "opacity 0.4s";
-        popup.style.opacity = "0";
-        setTimeout(() => {
-          popup.style.display = "none";
-        }, 400);
-      }
-    });
-  }
-  function showPopup(popup) {
+  video.addEventListener("click", () => {
+    const YTid = video.dataset.id;
+    video.classList.add("player");
+    video.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${YTid}?autoplay=1" frameborder="0" allowfullscreen></iframe>`;
+  });
+};
+
+const initPopups = () => {
+  const popup = document.querySelector(".popup");
+  const popupBtns = document.querySelectorAll(".popup-btn");
+  if (!popup || !popupBtns.length) return;
+
+  const showPopup = () => {
     popup.style.display = "flex";
-    setTimeout(() => {
-      popup.style.transition = "opacity 0.4s";
-      popup.style.opacity = "1";
-    }, 10);
-  } 
+    setTimeout(() => popup.style.opacity = "1", 10);
+  };
 
-  // popup
-  let popup = document.querySelector('.popup')
-  let popupBtns = document.querySelectorAll(".popup-btn");
-  if(popup && popupBtns){
-    hidePopup(popup);
-    popupBtns.forEach( btn => {
-      btn.addEventListener('click', () => {
-        showPopup(popup);
-      })
-    })
-  }
+  const hidePopup = () => {
+    popup.style.opacity = "0";
+    setTimeout(() => popup.style.display = "none", 400);
+  };
 
-  // file
-  let file = document.querySelector('.file');
-  if(file){
-    file.addEventListener('change', ()=> {
-      if(file.files[0]?.name) {
-        document.querySelector('.file-done').style.display = 'block';
-        document.querySelector('.file-done').innerHTML = file.files[0].name;
-        document.querySelector('.file-empty').style.display = 'none';
-      }
-      else {
-        document.querySelector('.file-done').style.display = 'none';
-        document.querySelector('.file-empty').style.display = 'block';
-      }
-    });
-  }
+  popup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("popup") || e.target.classList.contains("popup__close")) hidePopup();
+  });
+
+  popupBtns.forEach(btn => btn.addEventListener("click", showPopup));
+};
+
+const initFileUpload = () => {
+  const fileInput = document.querySelector(".file");
+  const fileDone = document.querySelector(".file-done");
+  const fileEmpty = document.querySelector(".file-empty");
+
+  if (!fileInput || !fileDone || !fileEmpty) return;
+
+  fileInput.addEventListener("change", () => {
+    const fileName = fileInput.files[0]?.name;
+    fileDone.style.display = fileName ? "block" : "none";
+    fileEmpty.style.display = fileName ? "none" : "block";
+    if (fileName) fileDone.textContent = fileName;
+  });
+};
+
+const initMapAnimations = () => {
+  document.querySelectorAll(".hero__map circle").forEach(circle => {
+    circle.style.animationDuration = `${(Math.random() * 2 + 1).toFixed(2)}s`;
+    circle.style.animationDelay = `${(Math.random() * 2).toFixed(2)}s`;
+  });
+};
+
+window.addEventListener("load", () => {
+  document.querySelectorAll(".tabs").forEach(initTabs);
+  sectionTop.forEach(addPadTop);
+  initAccordion();
+  initVideoPreview();
+  initPopups();
+  initFileUpload();
+  initMapAnimations();
+
+  document.querySelector(".header__burger")?.addEventListener("click", () => {
+    const menu = document.querySelector(".header__nav");
+    const burger = document.querySelector(".header__burger");
+    toggleMenu(burger, menu);
+  });
 
   // AOS
   AOS.init({
@@ -187,17 +160,7 @@ window.addEventListener("load", function () {
     offset: 0,
   });
 
-  // Map Home
-  document.querySelectorAll('.hero__map circle').forEach(circle => {
-    const randomDuration = (Math.random() * 2 + 1).toFixed(2) + 's';
-    const randomDelay = (Math.random() * 2).toFixed(2) + 's';
-  
-    circle.style.animationDuration = randomDuration;
-    circle.style.animationDelay = randomDelay;
-  });
-
   // Swiper
-
   var portfolioSwiper = new Swiper(".portfolioSwiper", {
     slidesPerView: 1.2,
     spaceBetween: 0,
@@ -214,7 +177,6 @@ window.addEventListener("load", function () {
       },
     }
   });
-
   var servicesSwiper2 = new Swiper(".servicesSwiper2", {
     direction: 'horizontal',
     initialSlide: 1,
@@ -229,7 +191,6 @@ window.addEventListener("load", function () {
       prevEl: ".services-inner__prev",
     },
   });
-
   var servicesSwiper = new Swiper(".servicesSwiper", {
     direction: 'horizontal',
     loop: true,
@@ -243,10 +204,20 @@ window.addEventListener("load", function () {
       prevEl: ".services-inner__prev",
     },
   });
-
   var clientsCards = new Swiper(".clientsCards", {
     slidesPerView: 2,
     spaceBetween: 0,
+    speed: 1500,
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+      },
+    }
+  });
+  var benefitsCards = new Swiper(".benefitsCards", {
+    slidesPerView: 1,
+    spaceBetween: 8,
     speed: 1500,
     breakpoints: {
       768: {
@@ -261,35 +232,23 @@ window.addEventListener("load", function () {
     if (window.innerWidth > 768) {
       if (!servicesCards) {
         servicesCards = new Swiper(".servicesCards", {
-          slidesPerView: 'auto',
+          slidesPerView: "auto",
           spaceBetween: 0,
           speed: 1500,
         });
       }
     } else {
       if (servicesCards) {
-        servicesCards.destroy(true, true); // Уничтожаем слайдер
+        servicesCards.destroy(true, true);
         servicesCards = null;
       }
     }
   }
   initSwiper();
 
-  var benefitsCards = new Swiper(".benefitsCards", {
-    slidesPerView: 1,
-    spaceBetween: 8,
-    speed: 1500,
-    breakpoints: {
-      768: {
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-      },
-    }
-  });
-
+  // portfolio
   const portfolio = document.querySelector('.portfolio-height');
   const portfolioCardsBox = portfolio?.querySelector('.portfolio__cards');
-  
   if (portfolio && portfolioCardsBox) {
     if (window.innerWidth > 767) {
       portfolio.style.height = `${portfolioCardsBox.offsetHeight + 340}px`;
@@ -299,115 +258,36 @@ window.addEventListener("load", function () {
     
   }
 
-  // Управление прокруткой и слайдером
-  function handleScroll(event, swiper) {
+  // GSAP
+  gsap.registerPlugin(ScrollTrigger);
 
-    if (!swiper) return; // Если слайдер не определен, выходим из функции
-
-    if (swiper.isEnd && event.deltaY > 0) {
-      window.removeEventListener("wheel", stopScroll, { passive: false });
-      window.addEventListener("wheel", enableScroll, { passive: false });
-    } else if (swiper.isBeginning && event.deltaY < 0) {
-      window.removeEventListener("wheel", stopScroll, { passive: false });
-      window.addEventListener("wheel", enableScroll, { passive: false });
-    } else {
-      event.preventDefault();
-      if (event.deltaY > 0) {
-        swiper.slideNext();
-      } else {
-        swiper.slidePrev();
-      }
-    }
-  }
-
-  // Функция для управления прокруткой и слайдами
-
-  function stopScroll(event) {
-    const sections = [
-      { element: document.querySelector(".clients-home"), swiper: clientsCards },
-      { element: document.querySelector(".services-home"), swiper: servicesCards },
-      { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
-    ];
-
-    sections.forEach((section) => {
-      if (section.element && section.swiper) {
-        const rect = section.element.getBoundingClientRect();
-        const threshold = window.innerHeight * 0.3;
-
-        if (rect.top <= threshold && rect.bottom >= threshold) {
-          handleScroll(event, section.swiper);
-        }
+  let horizontalSections = document.querySelectorAll('.horizontal');
+  
+  horizontalSections.forEach(horizontalSection => {
+    gsap.to(horizontalSection, {
+      x: () => horizontalSection.scrollWidth * -1,
+      xPercent: 100,
+      scrollTrigger: {
+        trigger: horizontalSection,
+        start: 'center center',
+        end: '+=2000px',
+        pin: horizontalSection,
+        scrub: 0.5,
+        invalidateOnRefresh: true
       }
     });
-  }
-
-  // Разрешение стандартного скролла
-  function enableScroll(event) {
-  const sections = [
-    { element: document.querySelector(".clients-home"), swiper: clientsCards },
-    { element: document.querySelector(".services-home"), swiper: servicesCards },
-    { element: document.querySelector(".benefits-home"), swiper: benefitsCards },
-  ];
-
-  let inSwiperZone = false;
-
-  sections.forEach((section) => {
-    if (section.element) {
-      const rect = section.element.getBoundingClientRect();
-      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-        inSwiperZone = true;
-      }
-    }
   });
 
-  if (inSwiperZone) {
-    window.removeEventListener("wheel", enableScroll, { passive: false });
-    window.addEventListener("wheel", stopScroll, { passive: false });
-  }
-  }
-
-  // Обработчик touch для тачпада
-  let touchStartX = 0;
-  let touchStartY = 0;
-
-  function handleTouchStart(event) {
-    const touch = event.touches[0];
-    touchStartX = touch.clientX;
-    touchStartY = touch.clientY;
-  }
-
-  function handleTouchMove(event) {
-    if (!touchStartX || !touchStartY) return;
-
-    const touch = event.touches[0];
-    const diffX = touch.clientX - touchStartX;
-    const diffY = touch.clientY - touchStartY;
-
-    // Если движение по вертикали больше, чем по горизонтали, обрабатываем как прокрутку
-    if (Math.abs(diffY) > Math.abs(diffX)) {
-      event.preventDefault(); 
-      if (Math.abs(diffY) > 400) { 
-        if (diffY > 0) {
-          handleScroll(event, this);
-        } else {
-          handleScroll(event, this);
-        }
+  window.addEventListener("scroll", ()=> {
+    initHeaderScroll();
+    let sectionAnim = document.querySelectorAll('.section-anim');
+    sectionAnim.forEach( section => {
+      let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY > offsetTop - 300) {
+        section.classList.add('active');
       }
-    }
-  }
-
-  function handleTouchEnd() {
-    touchStartX = 0;
-    touchStartY = 0;
-  }
-
-  // Добавляем обработчики touch
-  window.addEventListener("touchstart", handleTouchStart, { passive: true });
-  window.addEventListener("touchmove", handleTouchMove, { passive: false });
-  window.addEventListener("touchend", handleTouchEnd, { passive: true });
-
-  // Обработчики событий
-  window.addEventListener("wheel", stopScroll, { passive: false });
+    })
+  });
 
   window.addEventListener("resize", () => {
     initSwiper();
@@ -415,16 +295,6 @@ window.addEventListener("load", function () {
     if (window.innerWidth <= 980) {
       header.classList.remove('hidden');
     }
-  }, { passive: true });
-
-  window.addEventListener('scroll', () => {
-    headerScroll()
-    let sectionAnim = document.querySelectorAll('.section-anim');
-    sectionAnim.forEach( section => {
-      let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
-      if (window.scrollY > offsetTop - 400) {
-        section.classList.add('active');
-      }
-    })
-  }, { passive: true });
+  });
+  
 });
