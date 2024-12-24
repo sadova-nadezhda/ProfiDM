@@ -123,8 +123,12 @@
     border-radius: 100%; 
     transition: top 0.3s ease-out;
     cursor: pointer;
+    z-index: 5;
     &:hover {
       top: -10px;
+    }
+    @media(max-width: 767px) {
+      display: none;
     }
   }
   .line {
@@ -134,5 +138,8 @@
     transform: translateX(-50%);
     width: 100%;
     z-index: -1;
+    @media(max-width: 767px) {
+      display: none;
+    }
   }
 }
