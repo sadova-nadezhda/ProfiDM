@@ -367,11 +367,6 @@ window.addEventListener("load", function () {
           },
         });
       }
-    } else {
-      if (servicesCards) {
-        servicesCards.destroy(true, true); // Уничтожаем слайдер
-        servicesCards = null;
-      }
     }
   }
   initSwiper();
