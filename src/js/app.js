@@ -451,12 +451,12 @@ window.addEventListener("load", function () {
 
   window.addEventListener('scroll', () => {
     headerScroll()
-    let sectionAnim = document.querySelectorAll('.section-anim');
-    sectionAnim.forEach( section => {
-      let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
-      if (window.scrollY > offsetTop - 400) {
-        section.classList.add('active');
-      }
-    })
+    // let sectionAnim = document.querySelectorAll('.section-anim');
+    // sectionAnim.forEach( section => {
+    //   let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
+    //   if (window.scrollY > offsetTop - 400) {
+    //     section.classList.add('active');
+    //   }
+    // })
   });
 });
