@@ -401,6 +401,17 @@ window.addEventListener("load", function () {
         delay: 3000,
         disableOnInteraction: false,
       },
+      on: {
+        init() {
+          this.el.addEventListener('mouseenter', () => {
+            this.autoplay.stop();
+          });
+
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
+        }
+      },
     });
   };
 
@@ -411,7 +422,7 @@ window.addEventListener("load", function () {
     sliderContainers.forEach((sliderContainer) => {
       prepareSwiperMarkup(sliderContainer);
 
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 767) {
         initializeSwiper(sliderContainer);
       }
     });
