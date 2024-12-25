@@ -8,7 +8,7 @@
 // Global elements
 
 .breadcrumbs {
-  padding-top: 50px;
+  padding: 50px 0;
   &__container {
     overflow-y: hidden;
     overflow-x: scroll;
@@ -734,9 +734,12 @@
   &-page {
     &__cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       row-gap: 24px;
       height: auto;
+      @media (max-width: 1440px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
       @media (max-width: 980px) {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 16px;
@@ -752,7 +755,9 @@
       max-height: 277px;
       height: 19vw;
       min-height: 131px;
-      width: 177px;
+      @media(max-width: 767px) {
+        width: 177px;
+      }
     }
   }
 }
@@ -2154,7 +2159,7 @@ input.file {
     flex-direction: column;
     gap: 48px;
     max-width: 430px;
-    padding-top: 150px;
+    padding-top: 50px;
     @media(max-width: 980px) {
       padding-top: 0;
     }
