@@ -48,6 +48,46 @@ window.addEventListener("load", function () {
 
   sectionTop.forEach(addPadTop);
 
+  // preloader
+  const layers = document.querySelectorAll(".logo-layer");
+
+  // Таймлайн для анимации
+  const tl = gsap.timeline({
+    defaults: { ease: "power4.in" },
+  });
+
+  tl.fromTo(
+    layers,
+    {
+      opacity: 0,
+      rotation: -40,
+      rotationX: 50, 
+      rotationY: 90, 
+      z: (i) => i * 150,
+      y: 100,
+      scale: 1.5, 
+    },
+    {
+      duration: 4,
+      opacity: 1,
+      rotation: 0,
+      rotationX: 0, 
+      rotationY: 0,
+      z: 0,
+      y: 0,
+      scale: 0.7,
+      clearProps: "rotation, rotationX, rotationY, z, y",
+    }
+  );
+
+  // Скрытие прелоудера после завершения анимации
+  tl.add(() => {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+      preloader.style.opacity = 0; 
+    }
+  }, "+=1"); 
+
   // Табы портфолио
   document.querySelectorAll(".tabs").forEach(tabsContainer => {
     const STATE = { currentTab: null };
