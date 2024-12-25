@@ -18,6 +18,11 @@
     align-items: center;
     gap: 16px;
     text-transform: lowercase;
+    overflow: hidden;
+    @media (max-width: 767px) {
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
     a {
       position: relative;
       display: block;
