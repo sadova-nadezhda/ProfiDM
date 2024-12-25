@@ -390,28 +390,17 @@ window.addEventListener("load", function () {
   // Функция для инициализации слайдера с учетом его дополнительных классов
   const initializeSwiper = (sliderContainer) => {
     const isClientsCards = sliderContainer.classList.contains('clients__cards');
-    const slidesPerView = isClientsCards ? 2 : 1.2; 
+    const slidesPerView = isClientsCards ? 2.2 : 1.2; 
 
     new Swiper(sliderContainer, {
       slidesPerView: slidesPerView,
       spaceBetween: 8, 
       speed: 500,
       loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      on: {
-        init() {
-          this.el.addEventListener('mouseenter', () => {
-            this.autoplay.stop();
-          });
-
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
-        }
-      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
     });
   };
 
