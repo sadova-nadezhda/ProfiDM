@@ -503,6 +503,13 @@ window.addEventListener("load", function () {
   });
 
   window.addEventListener('scroll', () => {
-    headerScroll()
+    headerScroll();
+    let sectionAnim = document.querySelectorAll('.section-anim');
+    sectionAnim.forEach( section => {
+      let offsetTop = section?.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY > offsetTop - 300) {
+        section.classList.add('active');
+      }
+    })
   });
 });

@@ -159,7 +159,7 @@
   }
 
   &-lg {
-    font-size: 64px;
+    font-size: 48px;
 
     @media (max-width: 980px) {
       font-size: 32px;
@@ -956,6 +956,7 @@
   }
 
   &__desc {
+    margin-left: auto;
     max-width: 200px;
     color: rgba(255, 255, 255, 0.60);
 
@@ -1669,8 +1670,8 @@
     padding: 12px;
     border-radius: 12px;
     background: #220E0E;  
-    // transform: translateY(100vh);
-    // transition: transform 1.5s ease;
+    transform: translateY(100vh);
+    transition: transform 1.5s ease;
     &::before {
       content: '';
       position: absolute;
