@@ -88,11 +88,15 @@ window.addEventListener("load", function () {
       preloader.style.zIndex = -1;
     }
 
-    // AOS
-    AOS.init({
-      duration: 1200,
-      offset: 0,
-    });
+    if (window.location.pathname === '/') {
+      // AOS
+      AOS.init({
+        duration: 1200,
+        offset: 0,
+      });
+    }
+
+
   }, "+=1"); 
 
   // Табы портфолио
@@ -459,6 +463,14 @@ window.addEventListener("load", function () {
   };
 
   initMobSwipers();
+
+  if (window.location.pathname !== '/') {
+    // AOS
+    AOS.init({
+      duration: 1200,
+      offset: 0,
+    });
+  }
 
   // mask phone
   $.fn.setCursorPosition = function (pos) {
