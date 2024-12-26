@@ -85,7 +85,14 @@ window.addEventListener("load", function () {
     const preloader = document.querySelector('.preloader');
     if (preloader) {
       preloader.style.opacity = 0; 
+      preloader.style.zIndex = -1;
     }
+
+    // AOS
+    AOS.init({
+      duration: 1200,
+      offset: 0,
+    });
   }, "+=1"); 
 
   // Табы портфолио
@@ -220,12 +227,6 @@ window.addEventListener("load", function () {
       }
     });
   }
-
-  // AOS
-  AOS.init({
-    duration: 1200,
-    offset: 0,
-  });
 
   // Map Home
   document.querySelectorAll('.hero__map circle').forEach(circle => {
