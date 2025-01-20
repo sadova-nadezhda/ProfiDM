@@ -257,7 +257,7 @@ window.addEventListener("load", function () {
   
   updatePortfolioHeight();
 
-  // GSAP
+  // GSAP Home
   gsap.registerPlugin(ScrollTrigger);
 
   function initializeHorizontalScroll() {
@@ -297,6 +297,36 @@ window.addEventListener("load", function () {
   }
 
   initializeHorizontalScroll();
+
+  // GSAP About
+  let promo = document.querySelector('.promo');
+
+  let promoTimeline = gsap.timeline({
+    // scrollTrigger: {
+    //   trigger: ".promo",
+    //   start: "top 10%",
+    //   toggleActions: "play none none none",
+    //   // scrub: true,
+    // }
+  });
+  
+  promoTimeline
+  .fromTo(".promo .up", 
+    { y: -100, opacity: 0 }, 
+    { y: 0, opacity: 1, duration: 1 }
+  )
+  .fromTo(".promo .down", 
+    { y: 50 }, 
+    { y: 0, duration: 1 }, "-=0.8"
+  )
+  .fromTo(".promo .circle", 
+    { opacity: 0 }, 
+    { opacity: 1, duration: 1 }, "-=0.6" 
+  )
+  .fromTo(".promo__title", 
+    { opacity: 0 }, 
+    { opacity: 1, duration: 1 }, "-=0.6"
+  );
 
   // Swiper
 

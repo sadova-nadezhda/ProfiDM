@@ -43,7 +43,9 @@
 }
 
 .breadcrumbs {
+  position: relative;
   padding: 50px 0;
+  z-index: 2;
 
   &__container {
     overflow: hidden;
@@ -148,6 +150,30 @@
     &.active {
       .feedback__wrap {
         transform: translateY(0);
+      }
+      .about-benefits__card {
+        background: linear-gradient(180deg, rgba(172, 38, 47, 1) 0%, rgba(22, 18, 17, 0) 100%);
+        .about-benefits__txt {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        &:nth-child(even) {
+          background: linear-gradient(0deg, rgba(172, 38, 47, 1) 0%, rgba(22, 18, 17, 0) 100%);
+          .about-benefits__txt {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        @media(max-width: 767px) {
+          background: linear-gradient(0deg, rgba(172, 38, 47, 1) 0%, rgba(22, 18, 17, 0) 100%);
+        }
+      }
+      .about__desc {
+        strong {
+          opacity: 1;
+        }
       }
     }
   }
@@ -668,28 +694,55 @@
 // promo
 
 .promo {
+  position: relative;
+  margin-top: -120px;
+  overflow: hidden;
+  .up, .down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    will-change: transform, opacity;
+  }
+  .up {
+    top: 0;
+    z-index: 1;
+    @media (max-width: 1440px) {
+      top: 0;
+    }
+  }
+  .down {
+    bottom: 0;
+    @media (max-width: 1440px) {
+      bottom: 0;
+    }
+  }
+  .circle {
+    will-change: transform, opacity;
+  }
   &__container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 45vw;
     min-height: 550px;
+    @media(max-width: 1440px) {
+      height: 50vw;
+    }
   }
-
   &__title {
+    will-change: transform, opacity;
     font-family: Ruberoid;
     font-size: 84px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
     background: conic-gradient(from 145.54deg at 47.29% 100%, #460F13 -1.52deg, #460F13 160.41deg, #BE2630 252.58deg, #460F13 358.48deg, #460F13 520.41deg);
     -webkit-background-clip: text;
-    /* Используется для браузеров WebKit (Chrome, Safari) */
     background-clip: text;
-    /* Для остальных браузеров */
     color: transparent;
-    /* Делаем текст прозрачным, чтобы показать только градиент */
   }
 }
-
 
 // sections
 
@@ -2260,6 +2313,48 @@
     strong {
       color: rgba(172, 38, 47, 1);
       font-weight: 400;
+      opacity: 0;
+      transition: opacity 0.5s linear;
+    }
+    @media(max-width: 1400px) {
+      font-size: 32px;
+    }
+    @media(max-width: 1100px) {
+      font-size: 28px;
+    }
+    @media(max-width: 980px) {
+      font-size: 24px;
+    }
+    @media(max-width: 767px) {
+      font-size: 20px;
+    }
+  }
+
+  &__wrap {
+    max-width: 670px;
+    background: #000000;
+    &::after {
+      bottom: 50px;
+      width: 85%;
+      height: 50%;
+    }
+  }
+
+  &__box {
+    padding: 65px 50px;
+    &::before {
+      background: radial-gradient(101.33% 101.33% at 50% -21.53%, #460F13 44.66%, #AC262F 100%);
+      box-shadow: none;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 50px;
+  }
+
+  &__txt {
+    @media(max-width: 767px) {
+      font-size: 14px;
     }
   }
 
@@ -2269,21 +2364,165 @@
       grid-template-columns: repeat(4, 1fr);
       align-items: flex-start;
       gap: 24px;
+      @media(max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media(max-width: 767px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
     }
 
     &__card {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      min-height: 287px;
+      height: 287px;
       padding: 20px;
-      background: linear-gradient(180deg, #AC262F 0%, rgba(22, 18, 17, 0) 100%);
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(172, 38, 47, 0) 0%, rgba(22, 18, 17, 0) 100%);
+      transition: background 0.5s ease-in-out;
+
+      .about-benefits__txt {
+        opacity: 0;
+        transform: translateY(-100%);
+        background: linear-gradient(180deg, #FFFFFF 0%, #171111 157.79%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: transform 0.5s linear 0.2s, opacity 0.5s linear 0.2s;
+        @media(max-width: 767px) {
+          transform: translateY(100%);
+          background: linear-gradient(180deg, #FFFFFF 0%, #FC6670 105.19%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
 
       &:nth-child(even) {
         margin-top: 144px;
-        background: linear-gradient(0, #AC262F 0%, rgba(22, 18, 17, 0) 100%);
+        background: linear-gradient(0deg, rgba(172, 38, 47, 0) 0%, rgba(22, 18, 17, 0) 100%);
+
+        .about-benefits__txt {
+          transform: translateY(100%);
+          background: linear-gradient(180deg, #FFFFFF 0%, #FC6670 105.19%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        @media(max-width: 1100px) {
+          margin-top: 0;
+        }
+      }
+
+      @media(max-width: 767px) {
+        height: 220px;
+        padding: 16px;
+      }
+
+    }
+  }
+
+  &-history {
+    &__years {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 45px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+    }
+    &__year{
+      position: relative;
+      padding-bottom: 25px;
+      &::after {
+        content: '';
+        position: absolute;
       }
     }
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow: hidden;
+    }
+    &__col {
+      flex: 1 1 50%;
+      &_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 208px;
+      width: 208px;
+      border-radius: 100%;
+      background: rgba(19, 17, 17, 1);
+      box-shadow: 
+        84px 0px 157.93px -3.07px rgba(192, 48, 48, 1),
+        7.67px 0px 7.67px 0px rgba(234, 45, 45, 0.25),
+        32px 7.67px 65.78px 0px rgba(252, 20, 36, 1);
+
+      span {
+        font-size: 35px;
+        background: linear-gradient(270.35deg, #460F13 0.31%, #BE2630 101.95%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      // &::before, &::after {
+      //   content: '';
+      //   position: absolute;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   border-radius: 100%;
+      //   backdrop-filter: blur(90.46714782714844px);
+      //   z-index: -1;
+      //   box-shadow: 0 0 60px 10px rgba(237, 27, 39, 0.7);
+      // }
+      // &::before {
+      //   right: 0;
+      //   width: 1087px;
+      //   height: 558px;
+      //   background: linear-gradient(90deg, #ED1B27 0%, #141111 59.94%);
+      // }
+      // &::after {
+      //   left: 0;
+      //   width: 1087.14px;
+      //   height: 558.14px;
+      //   background: linear-gradient(90deg, #ED1B27 0%, #141111 100%);
+      // }
+    }
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: 646px;
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 207px;
+      padding: 32px;
+      background: rgba(18, 16, 16, 0.36);
+      font-size: 20px;
+      &.active {
+        background: rgba(18, 16, 16, 1);
+      }
+    }
+    &__caption {
+      color: rgba(172, 38, 47, 1);
+      line-height: 1;
+    }
+    &__txt {
+      max-width: 80%;
+    }
+
   }
 }
 
