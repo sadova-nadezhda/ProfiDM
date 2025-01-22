@@ -2067,7 +2067,12 @@
       height: 8%;
       border-radius: 43px;
       border: 1px solid var(--main, #AC262F);
-      box-shadow: 0px 0px 600px 0px #AC2932, 0px 0px 450px 0px #AC2932, 0px 0px 200px 0px #AC2932, 0px 0px 110.16px 0px #AC2932, 0px 0px 55.08px 0px #AC2932;
+      box-shadow: 
+      0px 0px 800px 0px rgba(172, 41, 50, 0.6),
+      0px 0px 600px 0px rgba(172, 41, 50, 0.4),
+      0px 0px 400px 0px rgba(172, 41, 50, 0.3),
+      0px 0px 200px 0px rgba(172, 41, 50, 0.2),
+      0px 0px 100px 0px rgba(172, 41, 50, 0.1);
       z-index: -1;
 
       @media(max-width: 767px) {
