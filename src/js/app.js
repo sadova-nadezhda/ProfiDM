@@ -328,6 +328,154 @@ window.addEventListener("load", function () {
     { opacity: 1, duration: 1 }, "-=0.6"
   );
 
+  // GSAP History
+  // function historyFunc() {
+  //   if (window.innerWidth > 980) {
+  //     const aboutHistory = document.querySelector('.about-history');
+  //     const cards = document.querySelectorAll('.about-history__card');
+  //     const years = document.querySelectorAll('.about-history__year');
+  
+  //     if (!aboutHistory || cards.length === 0) return;
+  
+  //     const lengthHistory = [...cards].reduce((acc, el) => acc + el.clientHeight, window.innerHeight);
+  
+  //     let HistoryTime = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: ".about-history",
+  //         start: 'top top',
+  //         end: `top top-=${lengthHistory}`,
+  //         scrub: 2,
+  //         pin: true,
+  //       },
+  //     });
+  
+  //     const ballPositions = Array.from({ length: years.length }, (_, i) => `${(100 / (years.length - 1)) * i}vw`);
+
+  //     console.log(ballPositions)
+  
+  //     ballPositions.forEach((pos, i) => {
+  //       if (i < years.length - 1) {
+  //         HistoryTime.to('.about-history__ball', { x: pos, duration: 1 }, i);
+  //         HistoryTime.fromTo(years[i], { opacity: 1 }, { opacity: 0.5, duration: 1 }, i);
+  //         HistoryTime.fromTo(years[i + 1], { opacity: 0.5 }, { opacity: 1, duration: 1 }, i);
+  
+  //         cards.forEach((card, index) => {
+  //           const cardHeight = card.clientHeight;
+  //           const cardTop = index === 0 ? 0 : (index * (cardHeight + 12));
+
+  //           gsap.set(card, { top: cardTop });
+            
+  //           if (index <= i) {
+  //             HistoryTime.fromTo(
+  //               card,
+  //               {
+  //                 opacity: 1,
+  //               },
+  //               { 
+  //                 opacity: 0,
+  //                 duration: 1,
+  //                 ease: "power2.out",
+  //               },
+  //               index
+  //             );
+  //             HistoryTime.to(
+  //               card,
+  //               { 
+  //                 top: 0,
+  //                 duration: 1,
+  //                 ease: "power2.out",
+  //               },
+  //               i
+  //             );
+  //           } else {
+  //             const offset = cards[0].clientHeight + 12;
+  //             HistoryTime.to(
+  //               card,
+  //               { 
+  //                 top: offset * (index - i),
+  //                 duration: 1,
+  //                 ease: "power2.out",
+  //               },
+  //               i
+  //             );
+  //           }
+  //         });
+  //       }
+  //     });
+  //   }
+  // }
+  
+  // historyFunc();
+
+  function historyFunc() {
+    if (window.innerWidth > 980) {
+      const aboutHistory = document.querySelector('.about-history');
+      const cards = document.querySelectorAll('.about-history__card');
+      const years = document.querySelectorAll('.about-history__year');
+      const ball = document.querySelector('.about-history__ball');
+  
+      if (!aboutHistory || cards.length === 0 || !ball) return;
+  
+      const lengthHistory = [...cards].reduce((acc, el) => acc + el.clientHeight, window.innerHeight);
+  
+      let HistoryTime = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about-history",
+          start: 'top top',
+          end: `top top-=${lengthHistory}`,
+          scrub: 2,
+          pin: true,
+        },
+      });
+  
+      const cardHeight = cards[0].clientHeight + 12; // Высота карточки с отступом
+      const ballPositions = Array.from({ length: years.length }, (_, i) => `${(100 / (years.length - 1)) * i}vw`);
+  
+      // Устанавливаем начальное положение карточек
+      cards.forEach((card, index) => {
+        gsap.set(card, { top: index * cardHeight });
+      });
+  
+      // Анимация для шарика и карточек
+      ballPositions.forEach((pos, i) => {
+        if (i < years.length - 1) {
+          // Движение шарика
+          HistoryTime.to(ball, { x: pos, duration: 1 }, i);
+  
+          // Переход между годами
+          HistoryTime.fromTo(
+            years[i],
+            { opacity: 1 },
+            { opacity: 0.5, duration: 1 },
+            i
+          );
+          HistoryTime.fromTo(
+            years[i + 1],
+            { opacity: 0.5 },
+            { opacity: 1, duration: 1 },
+            i
+          );
+  
+          // Логика анимации карточек
+          cards.forEach((card, index) => {
+            if (index < i) {
+              HistoryTime.to(card, { opacity: 0, duration: 1, ease: "power2.out" }, i);
+            } else if (index == i) {
+              HistoryTime.to(card, { top: 0, duration: 1, ease: "power2.out" }, i);
+            }
+            else if (index > i) {
+              const newTop = Math.max(0, (index - i) * cardHeight);
+              HistoryTime.to(card, { top: newTop, duration: 1, ease: "power2.out" }, i);
+            }
+          });
+        }
+      });
+    }
+  }
+  
+  historyFunc();
+  
+  
   // Swiper
 
   var portfolioSwiper = new Swiper(".portfolioSwiper", {
@@ -530,6 +678,10 @@ window.addEventListener("load", function () {
     if (window.innerWidth <= 980) {
       header.classList.remove('hidden');
     }
+
+    // GSAP History
+    // ScrollTrigger.refresh();
+    // historyFunc();
   });
 
   window.addEventListener('scroll', () => {
