@@ -305,6 +305,7 @@ window.addEventListener("load", function () {
       const cards = document.querySelectorAll('.about-history__card');
       const years = document.querySelectorAll('.about-history__year');
       const ball = document.querySelector('.about-history__ball');
+      const logo = document.querySelector('.about-history__logo');
   
       if (!aboutHistory || cards.length === 0 || !ball) return;
   
@@ -322,6 +323,13 @@ window.addEventListener("load", function () {
   
       const cardHeight = cards[0].clientHeight + 12; 
       const ballPositions = Array.from({ length: years.length }, (_, i) => `${(100 / (years.length - 1)) * i}vw`);
+
+      const shadowStyles = Array.from(years).map((_, i) => {
+        const baseX = i * 32;  // Индивидуальный сдвиг по оси X
+        return `${baseX}px 0px 158px -4px rgba(192, 48, 48, 1), 
+                8px 0px 8px 0px rgba(234, 45, 45, 0.25), 
+                ${baseX / 2}px 8px 66px 0px rgba(252, 20, 36, 1)`;
+      });
   
       cards.forEach((card, index) => {
         gsap.set(card, { top: index * cardHeight });
@@ -330,6 +338,8 @@ window.addEventListener("load", function () {
       ballPositions.forEach((pos, i) => {
         if (i < years.length - 1) {
           HistoryTime.to(ball, { x: pos, duration: 1 }, i);
+
+          HistoryTime.to(logo, { boxShadow: shadowStyles[i], duration: 1 }, i);
 
           HistoryTime.fromTo(
             years[i],
