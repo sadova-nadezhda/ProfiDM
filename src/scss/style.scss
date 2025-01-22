@@ -2113,13 +2113,6 @@
         border-radius: 100%;
         background: rgba(255, 255, 255, 0.64);
         animation: blink 3.5s ease infinite;
-        // box-shadow:
-        //   0px 0px 3px 3px #FFF,
-        //   0px 5px 5px 5px #FFF,
-        //   0px 15px 17px 5px #FFF,
-        //   0px 15px 35px 10px #FED2A9,
-        //   0px 35px 60px 10px #FED2A9,
-        //   0px 27px 105px 20px #FED2A9;
         filter:
           drop-shadow(0px 0px 2.52px #FFF) drop-shadow(0px 5px 5.04px #FFF) drop-shadow(0px 15px 17.64px #FFF) drop-shadow(0px 15px 35.28px #FED2A9) drop-shadow(0px 35px 60.48px #FED2A9) drop-shadow(0px 27px 105.84px #FED2A9) drop-shadow(0px 27px 200px #FED2A9);
       }
@@ -2586,20 +2579,9 @@
       border-radius: 100%;
       background: rgba(19, 17, 17, 1);
       box-shadow: 
-        -84.33px 0px 157.93px -3.07px rgba(192, 48, 48, 1),
-        7.67px 0px 7.67px 0px rgba(234, 45, 45, 0.25),
-        -32.2px 7.67px 65.78px 0px rgba(252, 20, 36, 1);
-
-      // box-shadow: 
-      //   0px 0px 157.93px -3.07px rgba(192, 48, 48, 1),
-      //   0px 0px 7.67px 0px rgba(234, 45, 45, 0.25),
-      //   0px 7.67px 65.78px 0px rgba(252, 20, 36, 1);
-
-
-      // box-shadow: 
-      //   84px 0px 157.93px -3.07px rgba(192, 48, 48, 1),
-      //   7.67px 0px 7.67px 0px rgba(234, 45, 45, 0.25),
-      //   32px 7.67px 65.78px 0px rgba(252, 20, 36, 1);
+        -84.33px 0px 158px -4px rgba(192, 48, 48, 1),
+        7.67px 0px 8px 0px rgba(234, 45, 45, 0.25),
+        -32.2px 8px 66px 0px rgba(252, 20, 36, 1);
 
       span {
         font-size: 35px;
@@ -2608,28 +2590,6 @@
         background-clip: text;
         color: transparent;
       }
-      // &::before, &::after {
-      //   content: '';
-      //   position: absolute;
-      //   top: 50%;
-      //   transform: translateY(-50%);
-      //   border-radius: 100%;
-      //   backdrop-filter: blur(90.46714782714844px);
-      //   z-index: -1;
-      //   box-shadow: 0 0 60px 10px rgba(237, 27, 39, 0.7);
-      // }
-      // &::before {
-      //   right: 0;
-      //   width: 1087px;
-      //   height: 558px;
-      //   background: linear-gradient(90deg, #ED1B27 0%, #141111 59.94%);
-      // }
-      // &::after {
-      //   left: 0;
-      //   width: 1087.14px;
-      //   height: 558.14px;
-      //   background: linear-gradient(90deg, #ED1B27 0%, #141111 100%);
-      // }
       @media(max-width: 980px) {
         display: none;
       }
