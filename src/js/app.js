@@ -302,12 +302,9 @@ window.addEventListener("load", function () {
   let promo = document.querySelector('.promo');
 
   let promoTimeline = gsap.timeline({
-    // scrollTrigger: {
-    //   trigger: ".promo",
-    //   start: "top 10%",
-    //   toggleActions: "play none none none",
-    //   // scrub: true,
-    // }
+    scrollTrigger: {
+      trigger: ".promo",
+    }
   });
   
   promoTimeline
